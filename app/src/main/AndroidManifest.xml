@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.CamActivity"></activity>
+        <activity android:name=".activities.BaseActivity" />
+        <activity android:name=".activities.AvisoActivity" />
+        <activity android:name=".activities.AseguradorasActivity" />
+        <activity android:name=".activities.AcercaActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
