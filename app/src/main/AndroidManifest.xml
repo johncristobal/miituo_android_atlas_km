@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.miituo.atlaskm">
+    package="com.miituo.atlaskm" >
 
     <application
         android:allowBackup="true"
@@ -8,11 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
+
+        <activity android:name=".activities.DescriptionSellector" />
+        <activity android:name=".activities.DetallePlanActivity" />
+        <activity android:name=".activities.CotizaActivity" />
+        <activity android:name=".activities.ContratarActivity" />
+        <activity android:name=".activities.ContactaActivity" />
         <activity
             android:name=".activities.ConfirmActivity"
             android:label="@string/title_activity_confirm"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.CancelActivity" />
         <activity android:name=".activities.CambioPagoActivity" />
         <activity android:name=".activities.CamActivity" />
@@ -20,7 +26,7 @@
         <activity android:name=".activities.AvisoActivity" />
         <activity android:name=".activities.AseguradorasActivity" />
         <activity android:name=".activities.AcercaActivity" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

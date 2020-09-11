@@ -6,44 +6,126 @@
     android:layout_height="match_parent"
     tools:context="com.miituo.atlaskm.activities.ConfirmActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.miituo.atlas.activities.ConfirmActivity"
+        tools:showIn="@layout/activity_confirm">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <RelativeLayout
+            android:id="@+id/relativeLayout5"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:theme="@style/Widget.AppCompat.Toolbar"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
-            <ImageButton
-                android:id="@+id/imageView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                app:srcCompat="?attr/actionModeCloseDrawable" />
-
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView8"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
 
             <TextView
-                android:id="@+id/textView27"
-                android:layout_marginLeft="40dp"
-                android:layout_marginStart="40dp"
+                android:id="@+id/textView41"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="20sp"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:text="Odómetro" />
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="18dp"
+                android:text="Tu último registro fue"
+                android:textSize="16sp" />
 
-        </androidx.appcompat.widget.Toolbar>
+            <EditText
+                android:id="@+id/editTextLast"
+                android:layout_width="235dp"
+                android:layout_height="42dp"
+                android:layout_alignLeft="@+id/textView41"
+                android:layout_alignStart="@+id/textView41"
+                android:layout_below="@+id/textView41"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Último odómetro"
+                android:inputType="number" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+        </RelativeLayout>
 
-    <include layout="@layout/content_confirm" />
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:text="Odómetro mensual"
+            android:textSize="24sp" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout5"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:text="Introduzca su odómetro actual"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editTextConfirma"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Odómetro"
+                android:inputType="number"
+                android:padding="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border"
+                android:layout_below="@+id/textView58"
+                android:layout_alignLeft="@+id/textView58"
+                android:layout_alignStart="@+id/textView58" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="165dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/relativeLayout4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button"
+            android:elevation="17dp"
+            android:onClick="validar"
+            android:text="Aceptar"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/foto" />
+
+    </RelativeLayout>
+
+    <!--<include layout="@layout/content_confirm" /> Falta añadir el content-->
 
     <!--android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
