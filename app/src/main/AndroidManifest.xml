@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.SyncActivity"></activity>
+        <activity android:name=".activities.WebActivity"></activity>
+        <activity android:name=".activities.VehiclePictures" />
+        <activity android:name=".activities.VehicleOdometer" />
+        <activity android:name=".activities.UnavailableSite" />
+        <activity android:name=".activities.TokenSmsActivity" />
+        <activity android:name=".activities.TicketActivity" />
+        <activity android:name=".activities.TerminosActivity" />
+        <activity android:name=".activities.SyncActivity" />
         <activity android:name=".activities.ShareSMActivity" />
         <activity android:name=".activities.PlanesActivityTab" />
         <activity android:name=".activities.PDFViewer" />
