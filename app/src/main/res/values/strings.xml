@@ -21,4 +21,9 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="tomar_fotografia">Tomar Fotografía</string>
+    <string name="icon">icon</string>
+    <string name="action_example">Example action</string>
+    <string name="title_home">Tu cotización</string>
+    <string name="title_dashboard">Tu auto</string>
+    <string name="title_notifications">Tus datos</string>
 </resources>
