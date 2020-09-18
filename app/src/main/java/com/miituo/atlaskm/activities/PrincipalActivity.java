@@ -142,11 +142,10 @@ public class PrincipalActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        /* toolbar de polizas
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Tus pólizas");
         toolbar.setTitleTextColor(Color.BLACK);
-        setSupportActionBar(toolbar);*/
+        setSupportActionBar(toolbar);
 
         app_preferences = getSharedPreferences("miituo", Context.MODE_PRIVATE);
         starttime = app_preferences.getLong("time", 0);

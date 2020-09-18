@@ -234,7 +234,7 @@ public class VehicleOdometer extends BaseActivity {
                     }
                     // Continue only if the File was successfully created
                     if (photoFile != null) {
-                        Uri photoURI = FileProvider.getUriForFile(VehicleOdometer.this, "miituo.com.miituo.provider", photoFile);
+                        Uri photoURI = FileProvider.getUriForFile(VehicleOdometer.this, "com.miituo.atlaskm.provider", photoFile);
                         //Uri photoURI = Uri.fromFile(photoFile);
                         takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                         startActivityForResult(takepic, ODOMETER);

@@ -35,4 +35,13 @@
     <string name="tel_gnp">tel gnp</string>
     <string name="dbversion">25</string>
     <string name="asset_statements">" [{             \"relation\": [\"delegate_permission/common.handle_all_urls\"],             \"target\": {                 \"namespace\": \"web\",                 \"site\": \"https://websitedev2019.miituo.com/Cotizar\"}         }]"</string>
+    <string name="facebook_app_id">2002082330076040</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
+    <string name="title_activity_vehicle_pictures">VehiclePictures</string>
+    <string name="title_activity_vehicle_odometer">VehicleOdometer</string>
+    <string name="title_activity_token_sms">TokenSmsActivity</string>
+    <string name="title_activity_sync">SyncActivity</string>
+    <string name="title_activity_share_sm">ShareSMActivity</string>
+    <string name="title_activity_planes">PlanesActivity</string>
+    <string name="title_activity_last_odometer">LastOdometerActivity</string>
 </resources>

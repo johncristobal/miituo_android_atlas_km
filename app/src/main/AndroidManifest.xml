@@ -16,6 +16,10 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:name=".activities.GlobalActivity"
@@ -29,26 +33,149 @@
             android:name="asset_statements"
             android:resource="@string/asset_statements" />
 
-        <activity android:name=".activities.PrincipalActivity"></activity>
-        <activity android:name=".activities.CotizarAutoActivity" />
-        <activity android:name=".tuto.TutorialActivity" />
-        <activity android:name=".activities.WebActivity" />
-        <activity android:name=".activities.VehiclePictures" />
-        <activity android:name=".activities.VehicleOdometer" />
-        <activity android:name=".activities.UnavailableSite" />
-        <activity android:name=".activities.TokenSmsActivity" />
-        <activity android:name=".activities.TicketActivity" />
-        <activity android:name=".activities.TerminosActivity" />
-        <activity android:name=".activities.SyncActivity" />
-        <activity android:name=".activities.ShareSMActivity" />
-        <activity android:name=".activities.PlanesActivityTab" />
-        <activity android:name=".activities.PDFViewer" />
-        <activity android:name=".activities.NotificationsActivity" />
-        <activity android:name=".activities.NoReporteOdometroActivity" />
-        <activity android:name=".activities.MapsActivity" />
-        <activity android:name=".activities.LastOdometerActivity" />
-        <activity android:name=".activities.InfoCancelActivity" />
-        <activity android:name=".activities.GlobalActivity" />
+        <activity android:name=".activities.PrincipalActivity"
+            android:label="@string/title_activity_principal"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="ocr" />
+
+        <activity
+            android:name=".activities.CotizarAutoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <receiver android:name=".utils.Alarma" />
+
+        <activity
+            android:name=".tuto.TutorialActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_tutorial"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.WebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.VehiclePictures"
+           />
+
+        <activity
+            android:name=".activities.VehicleOdometer"
+            android:configChanges="screenLayout|orientation|screenSize"
+            android:label="@string/title_activity_vehicle_odometer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
+        <activity
+            android:name=".activities.UnavailableSite"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.TokenSmsActivity"
+            android:label="@string/title_activity_token_sms"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".activities.TicketActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.TerminosActivity"
+            android:label="Términos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.SyncActivity"
+            android:label="@string/title_activity_sync"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.miituo.atlaskm.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+
+        <activity
+            android:name=".activities.ShareSMActivity"
+            android:label="@string/title_activity_share_sm"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.PlanesActivityTab"
+            android:label="@string/title_activity_planes"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.PDFViewer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.NotificationsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.NoReporteOdometroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name=".activities.MapsActivity"
+            android:label="Siniestro"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.LastOdometerActivity"
+            android:label="@string/title_activity_last_odometer"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.InfoCancelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".activities.GlobalActivity" />
+
+        <service
+            android:name=".Servicio.backPhotosService"
+            android:enabled="true"
+            android:process=":something"
+            android:stopWithTask="true" />
+
+        <receiver android:name=".Servicio.TimerBroadcastReceiver" />
+
         <activity android:name=".activities.DetallesPlanesActivity" />
         <activity android:name=".activities.DetallesActivity" />
         <activity android:name=".activities.DescriptionSellector" />
@@ -56,24 +183,40 @@
         <activity android:name=".activities.CotizaActivity" />
         <activity android:name=".activities.ContratarActivity" />
         <activity android:name=".activities.ContactaActivity" />
+
         <activity
             android:name=".activities.ConfirmActivity"
             android:label="@string/title_activity_confirm"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".activities.CancelActivity" />
         <activity android:name=".activities.CambioPagoActivity" />
-        <activity android:name=".activities.CamActivity" />
+
+        <activity
+            android:name=".activities.CamActivity"
+            android:label=""
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".activities.BaseActivity" />
         <activity android:name=".activities.AvisoActivity" />
         <activity android:name=".activities.AseguradorasActivity" />
         <activity android:name=".activities.AcercaActivity" />
-        <activity android:name=".activities.MainActivity">
+
+
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

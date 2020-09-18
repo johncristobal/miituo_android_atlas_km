@@ -180,7 +180,7 @@ public class VehiclePictures extends AppCompatActivity {
         Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
 
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
-        leyenda.setTypeface(typeface);
+        //leyenda.setTypeface(typeface);
         res.setTypeface(typeface);
 
         app_preferences= getSharedPreferences("miituo", Context.MODE_PRIVATE);
@@ -236,6 +236,7 @@ public class VehiclePictures extends AppCompatActivity {
         dialog.show();
     }
 
+
     public void tomarfoto(int p,String name, boolean isupper23){
 
         LogHelper.log(this,LogHelper.user_interaction,"VehiclePictures."+name,"a tomar foto","",
@@ -254,7 +255,7 @@ public class VehiclePictures extends AppCompatActivity {
             if (photoFile != null) {
                 Uri photoURI;
                 if(isupper23) {
-                    photoURI = FileProvider.getUriForFile(VehiclePictures.this, "miituo.com.miituo.provider", photoFile);
+                    photoURI = FileProvider.getUriForFile(VehiclePictures.this, "com.miituo.atlaskm.provider", photoFile);
                 }
                 else{
                     photoURI = Uri.fromFile(photoFile);
