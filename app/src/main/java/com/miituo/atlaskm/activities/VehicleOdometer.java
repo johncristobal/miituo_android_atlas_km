@@ -134,7 +134,7 @@ public class VehicleOdometer extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vehicle_odometer);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         tok = IinfoClient.getInfoClientObject().getClient().getToken();
 
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
@@ -156,16 +156,18 @@ public class VehicleOdometer extends BaseActivity {
             btnSinAuto.setEnabled(false);
         }
 
-        ImageButton back = (ImageButton)findViewById(R.id.imageView12);
-        back.setOnClickListener(new View.OnClickListener() {
+        //hay que poner titulo y boton de regreso...
+        //ImageButton back = (ImageButton)findViewById(R.id.imageView12);
+        /*back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
-        });
+        });*/
+
         Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
-        TextView titulo = (TextView)findViewById(R.id.textView27);
-        titulo.setTypeface(typefacebold);
+        //TextView titulo = (TextView)findViewById(R.id.textView27);
+        //titulo.setTypeface(typefacebold);
 
         Init5();
         api=new ApiClient(VehicleOdometer.this);

@@ -26,4 +26,12 @@
     <string name="title_home">Tu cotización</string>
     <string name="title_dashboard">Tu auto</string>
     <string name="title_notifications">Tus datos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sellect_anio">Por favor selecciona el año</string>
+    <string name="sin_auto">Ya no tengo mi auto</string>
+    <string name="tel_atlas">018008493917</string>
+    <string name="tel_ana">018009112627</string>
+    <string name="tel_gnp">tel gnp</string>
+    <string name="dbversion">25</string>
 </resources>

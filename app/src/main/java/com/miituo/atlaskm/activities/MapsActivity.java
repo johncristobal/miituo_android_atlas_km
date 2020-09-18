@@ -46,9 +46,9 @@ public class MapsActivity extends BaseActivity implements OnMapReadyCallback, Lo
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        lbDir=(TextView)findViewById(R.id.lbDir);
+        //lbDir=(TextView)findViewById(R.id.lbDir);
         lbLlamar=(TextView)findViewById(R.id.lbLlamar);
-        progress=(ProgressBar)findViewById(R.id.progress);
+        //progress=(ProgressBar)findViewById(R.id.progress);
         mapFragment= (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         lbDir.setText("Obteniendo direccíon...\nContinua moviendote para actualizar la ubicación");
         getLocation();

@@ -49,10 +49,10 @@ public class PDFViewer extends BaseActivity implements OnPageChangeListener,OnLo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pdfviewer);
+        setContentView(R.layout.activity_p_d_f_viewer);
 
         boolean isPoliza = getIntent().getBooleanExtra("isPoliza",true);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (isPoliza) {
             toolbar.setTitle("Póliza");
         } else {
@@ -60,6 +60,7 @@ public class PDFViewer extends BaseActivity implements OnPageChangeListener,OnLo
         }
         toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);
+         */
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 

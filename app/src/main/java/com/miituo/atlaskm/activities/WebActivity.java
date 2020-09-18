@@ -104,15 +104,15 @@ public class WebActivity extends BaseActivity implements SimpleCallBack {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Cambiar método de pago");
-        toolbar.setTitleTextColor(Color.BLACK);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //toolbar.setTitle("Cambiar método de pago");
+        //toolbar.setTitleTextColor(Color.BLACK);
+        //setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         wvPago = (WebView) findViewById(R.id.wvPago);
         cntTarjetas=(LinearLayout)findViewById(R.id.cntTarjetas);
-        cntAmex=(LinearLayout)findViewById(R.id.cntAmex);
+        //cntAmex=(LinearLayout)findViewById(R.id.cntAmex); cuenta de american express
         wvPago.setWebViewClient(new WebViewClient());
         wvPago.getSettings().setJavaScriptEnabled(true);
         cntTarjetas.setOnClickListener(new View.OnClickListener() {

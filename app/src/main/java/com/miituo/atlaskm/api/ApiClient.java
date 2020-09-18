@@ -51,7 +51,7 @@ import com.miituo.atlaskm.data.IinfoClient;
 import com.miituo.atlaskm.data.InfoClient;
 import com.miituo.atlaskm.data.imagenClass;
 import com.miituo.atlaskm.db.Logger;
-import com.miituo.atlaskm.miltiaseguradora.Aseguradoras;
+import com.miituo.atlaskm.multiaseguradora.Aseguradoras;
 import com.miituo.atlaskm.tuto.TutorialActivity;
 import com.miituo.atlaskm.utils.LogHelper;
 import okhttp3.MediaType;

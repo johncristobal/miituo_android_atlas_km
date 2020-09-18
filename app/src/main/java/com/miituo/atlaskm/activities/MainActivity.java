@@ -91,6 +91,7 @@ public class MainActivity extends BaseActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+        /*
         mVideoView = (VideoView) findViewById(R.id.videoView);
         String uri = "android.resource://" + getPackageName() + "/" + R.raw.logo_ani_miituo;
         if (mVideoView != null) {
@@ -98,7 +99,7 @@ public class MainActivity extends BaseActivity {
             mVideoView.setZOrderOnTop(true);
             mVideoView.requestFocus();
             mVideoView.start();
-        }
+        }*/
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
@@ -147,12 +148,12 @@ public class MainActivity extends BaseActivity {
         lbCostoTarifa.setTypeface(tipo, Typeface.BOLD);
         lbl1 = (TextView) findViewById(R.id.lbl1);
         lbl1.setTypeface(tipo);
-        lbl2 = (TextView) findViewById(R.id.lbl2);
-        lbl2.setTypeface(tipo);
-        lbl3 = (TextView) findViewById(R.id.lbl3);
-        lbl3.setTypeface(tipo);
-        lbl4 = (TextView) findViewById(R.id.lbl4);
-        lbl4.setTypeface(tipo);
+        //lbl2 = (TextView) findViewById(R.id.lbl2);
+        //lbl2.setTypeface(tipo);
+        //lbl3 = (TextView) findViewById(R.id.lbl3);
+        //lbl3.setTypeface(tipo);
+        //lbl4 = (TextView) findViewById(R.id.lbl4);
+       // lbl4.setTypeface(tipo);
         lbSeguro = (TextView) findViewById(R.id.lbSeguro);
         lbSeguro.setTypeface(tipo);
         lbSeguro.setText("Seguro de responsabilidad civil\nDerecho de póliza");

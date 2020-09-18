@@ -59,10 +59,12 @@ public class TicketActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ticket);
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbartaby);
-        toolbar.setTitle("último reporte odómetro");
-        toolbar.setTitleTextColor(Color.BLACK);
-        setSupportActionBar(toolbar);
+
+        //Darle color y titulo al toolbar que se quito por la aplicacion nueva
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbartaby);
+        // toolbar.setTitle("último reporte odómetro");
+        //toolbar.setTitleTextColor(Color.BLACK);
+        //setSupportActionBar(toolbar);
         //get back arrow
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

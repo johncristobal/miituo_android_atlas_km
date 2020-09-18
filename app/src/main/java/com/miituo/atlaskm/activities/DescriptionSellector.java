@@ -26,10 +26,13 @@ public class DescriptionSellector extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description_sellector);
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Descripción");
         toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);
+
+         */
         //get back arrow
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

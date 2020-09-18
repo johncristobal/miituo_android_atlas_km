@@ -11,9 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#FFFFFF"
-        android:padding="10dp"
-        tools:context="com.miituo.atlas.activities.SyncActivity"
-        tools:showIn="@layout/activity_sync">
+        android:padding="10dp">
 
         <ScrollView
             android:layout_width="match_parent"

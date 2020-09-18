@@ -1,5 +1,4 @@
 package com.miituo.atlaskm.activities;
-package miituo.com.miituo.activities;
 
 import android.app.Dialog;
 import android.app.NotificationManager;
@@ -57,13 +56,14 @@ public class NotificationsActivity extends BaseActivity implements SimpleCallBac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Alertas");
         toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
+        */
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         lb1=(TextView)findViewById(R.id.lb1);
         lb1.setTypeface(typeface,Typeface.BOLD);

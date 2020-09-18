@@ -30,7 +30,7 @@ public class ConfirmActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //toolbar.setTitle("Odómetro");
         //toolbar.setTitleTextColor(Color.BLACK);
         //setSupportActionBar(toolbar);
@@ -71,7 +71,7 @@ public class ConfirmActivity extends AppCompatActivity {
             editlast.setEnabled(false);
         }
 
-        ImageButton back = (ImageButton)findViewById(R.id.imageView12);
+        /*ImageButton back = (ImageButton)findViewById(R.id.imageView12);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,10 +80,12 @@ public class ConfirmActivity extends AppCompatActivity {
             }
         });
 
+         */
+
         //get image and how into imageview here
         Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
-        TextView titulo = (TextView)findViewById(R.id.textView27);
-        titulo.setTypeface(typefacebold);
+        //TextView titulo = (TextView)findViewById(R.id.textView27);
+        //titulo.setTypeface(typefacebold);
 
         SharedPreferences preferences = getSharedPreferences("miituo", Context.MODE_PRIVATE);
         String mCurrentPhotoPath = preferences.getString("nombrefotoodometro", "null");

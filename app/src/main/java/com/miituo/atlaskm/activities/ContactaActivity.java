@@ -34,31 +34,34 @@ public class ContactaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacta);
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Contacto");
         toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);
+
+         */
         //get back arrow
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         lbQuestion=findViewById(R.id.lbQuestion);
         lbQuestion.setTypeface(typeface,Typeface.BOLD);
-        lbFindUs=findViewById(R.id.lbFindUs);
-        lbFindUs.setTypeface(typeface,Typeface.BOLD);
-        lbAddress=findViewById(R.id.lbAddress);
-        lbAddress.setTypeface(typeface);
+        //lbFindUs=findViewById(R.id.lbFindUs);
+        //lbFindUs.setTypeface(typeface,Typeface.BOLD);
+        //lbAddress=findViewById(R.id.lbAddress);
+        //lbAddress.setTypeface(typeface);
         lbT1=findViewById(R.id.lbT1);
         lbT1.setTypeface(typeface);
-        lbT2=findViewById(R.id.lbT2);
+        //lbT2=findViewById(R.id.lbT2);
         lbT2.setTypeface(typeface,Typeface.BOLD);
         lbE=findViewById(R.id.lbE);
         lbE.setTypeface(typeface,Typeface.BOLD);
 
-        face=findViewById(R.id.imgFace);
-        twit=findViewById(R.id.imgTwit);
-        link=findViewById(R.id.imgInk);
-        inst=findViewById(R.id.imgIns);
+        //face=findViewById(R.id.imgFace);
+        //twit=findViewById(R.id.imgTwit);
+        //link=findViewById(R.id.imgInk);
+        //inst=findViewById(R.id.imgIns);
 
         lbAddress.setText("Bosque de Duraznos 61 Piso 12\n" +
                 "Col. Bosques de las Lomas  11700,\n" +

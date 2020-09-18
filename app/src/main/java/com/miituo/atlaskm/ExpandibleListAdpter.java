@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.List;
 
-import miituo.com.miituo.data.InfoSectionItem;
+import com.miituo.atlaskm.data.InfoSectionItem;
 
 /**
  * Created by miituo on 01/02/2017.

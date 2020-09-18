@@ -72,7 +72,7 @@ public class PlanesActivityTab extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_planes2);
+        setContentView(R.layout.activity_planes_tab);
 
         mainView = findViewById(R.id.view);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);

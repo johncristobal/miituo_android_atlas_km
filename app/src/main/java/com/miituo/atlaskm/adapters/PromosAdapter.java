@@ -45,8 +45,8 @@ public class PromosAdapter extends PagerAdapter
             if(position==0){
                 LinearLayout ll=(LinearLayout)view.findViewById(R.id.cntCodigo);
                 TextView lbCodigo=(TextView)view.findViewById(R.id.lbCodigo);
-                TextView tvKil= (TextView)view.findViewById(R.id.tvKms);
-                tvKil.setText(String.format("%d km", kms));
+               // TextView tvKil= (TextView)view.findViewById(R.id.tvKms); recuperamos los kms de algun lugar
+                //tvKil.setText(String.format("%d km", kms));
                 String share="";
                 for(int i=0;i<codigo.length();i++){
                     share=share+codigo.charAt(i)+" ";

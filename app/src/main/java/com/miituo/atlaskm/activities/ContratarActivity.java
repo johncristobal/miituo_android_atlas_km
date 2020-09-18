@@ -305,10 +305,13 @@ public class ContratarActivity extends BaseActivity implements SimpleCallBack{
     }
 
     private void initGral() {
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Contratar");
         toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);
+
+         */
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         tipo = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
@@ -380,7 +383,7 @@ public class ContratarActivity extends BaseActivity implements SimpleCallBack{
         cntDatosConductor=(RelativeLayout) findViewById(R.id.cntDatosConductor);
         cntDatosAuto=(LinearLayout) findViewById(R.id.cntDatosAuto);
         cntValidar=(RelativeLayout) findViewById(R.id.cntValidar);
-        cntPagar=(RelativeLayout) findViewById(R.id.cntPagar);
+       // cntPagar=(RelativeLayout) findViewById(R.id.cntPagar);
     }
 
     private void init1(){
@@ -446,9 +449,9 @@ public class ContratarActivity extends BaseActivity implements SimpleCallBack{
         lbDatosContractor.setTypeface(tipo,Typeface.BOLD);
         lbToAuto=(TextView)findViewById(R.id.lbToAuto);
         lbToAuto.setTypeface(tipo);
-        lbAvisoPriv=(TextView)findViewById(R.id.lbAvisoPriv);
+       // lbAvisoPriv=(TextView)findViewById(R.id.lbAvisoPriv);
         lbAvisoPriv.setTypeface(tipo);
-        lbAvisoPrivLink=(TextView)findViewById(R.id.lbAvisoPrivLink);
+        //lbAvisoPrivLink=(TextView)findViewById(R.id.lbAvisoPrivLink);
         lbAvisoPrivLink.setTypeface(tipo,Typeface.BOLD);
         lbAvisoPrivLink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -828,8 +831,8 @@ public class ContratarActivity extends BaseActivity implements SimpleCallBack{
         wvPago.setVerticalScrollBarEnabled(true);
         wvPago.setHorizontalScrollBarEnabled(true);
         cntTarjetas=(LinearLayout)findViewById(R.id.cntTarjetas);
-        cntPromo=(LinearLayout)findViewById(R.id.cntPromo);
-        cntAmex=(LinearLayout)findViewById(R.id.cntAmex);
+        //cntPromo=(LinearLayout)findViewById(R.id.cntPromo);
+        //cntAmex=(LinearLayout)findViewById(R.id.cntAmex);
         cntPaypal=(LinearLayout)findViewById(R.id.cntPaypal);
 
         lbHasCupon=(TextView)findViewById(R.id.lbHasCupon);
@@ -838,12 +841,12 @@ public class ContratarActivity extends BaseActivity implements SimpleCallBack{
         lbValidaCodigo.setTypeface(tipo,Typeface.BOLD);
         etCupon=(EditText)findViewById(R.id.etCupon);
         etCupon.setTypeface(tipo);
-        lbPromo1=(TextView)findViewById(R.id.lbPromo1);
-        lbPromo1.setTypeface(tipo,Typeface.BOLD);
-        lbPromo2=(TextView)findViewById(R.id.lbPromo2);
-        lbPromo2.setTypeface(tipo);
-        lbPromo3=(TextView)findViewById(R.id.lbPromo3);
-        lbPromo3.setTypeface(tipo,Typeface.BOLD);
+        //lbPromo1=(TextView)findViewById(R.id.lbPromo1);
+        //lbPromo1.setTypeface(tipo,Typeface.BOLD);
+        //lbPromo2=(TextView)findViewById(R.id.lbPromo2);
+        //lbPromo2.setTypeface(tipo);
+        //lbPromo3=(TextView)findViewById(R.id.lbPromo3);
+        //lbPromo3.setTypeface(tipo,Typeface.BOLD);
         pintaCupon();
         if(SyncActivity.kms>0){
             cntPromo.setVisibility(View.VISIBLE);

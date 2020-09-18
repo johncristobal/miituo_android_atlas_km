@@ -42,10 +42,12 @@ public class CambioPagoActivity extends BaseActivity implements CallBack {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cambio_pago);
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Cambiar método de pago");
         toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);
+         */
         //get back arrow
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

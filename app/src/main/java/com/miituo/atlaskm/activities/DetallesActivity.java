@@ -5,18 +5,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import androidx.annotation.NonNull;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.Menu;
@@ -33,12 +29,10 @@ import com.bumptech.glide.request.target.Target;
 import com.google.android.material.tabs.TabLayout;
 
 import java.io.File;
-import java.util.List;
 
 import com.miituo.atlaskm.R;
 import com.miituo.atlaskm.api.ApiClient;
 import com.miituo.atlaskm.data.IinfoClient;
-import com.miituo.atlaskm.data.InfoClient;
 import com.miituo.atlaskm.fragments.PagerAdapter;
 import com.miituo.atlaskm.threats.GetPDFSync;
 import com.miituo.atlaskm.utils.CallBack;
@@ -63,10 +57,11 @@ public class DetallesActivity extends AppCompatActivity {
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
 
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbartaby);
         toolbar.setTitle("General");
         toolbar.setTitleTextColor(Color.BLACK);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);*/
         //get back arrow
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

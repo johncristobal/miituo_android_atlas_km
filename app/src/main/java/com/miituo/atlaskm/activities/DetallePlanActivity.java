@@ -51,7 +51,7 @@ public class DetallePlanActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_plan);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         Gson parseJson = new GsonBuilder().create();
         Intent i=getIntent();
         rl=parseJson.fromJson(i.getExtras().getString("plan"), new TypeToken<RateList>() {}.getType());
@@ -64,9 +64,9 @@ public class DetallePlanActivity extends AppCompatActivity {
         id=i.getIntExtra("id",0);
         pagoUnico=i.getDoubleExtra("pagoUnico",0.0);
         isSimulacion=i.getBooleanExtra("isSimulacion",false);
-        toolbar.setTitle("Detalles ");
-        toolbar.setTitleTextColor(Color.BLACK);
-        setSupportActionBar(toolbar);
+        //toolbar.setTitle("Detalles ");
+        //toolbar.setTitleTextColor(Color.BLACK);
+        //setSupportActionBar(toolbar);
         //get back arrow
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

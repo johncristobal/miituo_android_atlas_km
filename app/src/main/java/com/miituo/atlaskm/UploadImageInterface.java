@@ -2,7 +2,7 @@ package com.miituo.atlaskm;
 
 import java.util.Map;
 
-import miituo.com.miituo.data.imagenClass;
+import com.miituo.atlaskm.data.imagenClass;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.Call;

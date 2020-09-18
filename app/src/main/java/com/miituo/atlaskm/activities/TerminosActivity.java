@@ -37,10 +37,13 @@ public class TerminosActivity extends BaseActivity implements SimpleCallBack {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terminos);
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Avisos legales y Condiciones");
         toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);
+
+         */
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");

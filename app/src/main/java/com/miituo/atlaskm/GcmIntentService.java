@@ -20,7 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import miituo.com.miituo.activities.MainActivity;
+import com.miituo.atlaskm.activities.MainActivity;
 
 /**
  * Created by john.cristobal on 23/06/17.

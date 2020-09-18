@@ -40,10 +40,13 @@ public class NoReporteOdometroActivity extends AppCompatActivity {
     }
 
     private void init(){
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);
+
+         */
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         tipo= Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");

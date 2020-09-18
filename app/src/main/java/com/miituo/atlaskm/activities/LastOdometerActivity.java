@@ -79,7 +79,7 @@ public class LastOdometerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_last_odometer);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
@@ -97,17 +97,17 @@ public class LastOdometerActivity extends AppCompatActivity {
         app_preferences= getSharedPreferences("miituo", Context.MODE_PRIVATE);
         tipoodometro = app_preferences.getString("odometro","null");
 
-        ImageButton back = (ImageButton)findViewById(R.id.imageView12);
+        /*ImageButton back = (ImageButton)findViewById(R.id.imageView12);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
-        });
+        });*/
 
         Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
-        TextView titulo = (TextView)findViewById(R.id.textView27);
-        titulo.setTypeface(typefacebold);
+        //TextView titulo = (TextView)findViewById(R.id.textView27);
+        //titulo.setTypeface(typefacebold);
 
         //get image and how into imageview here
         SharedPreferences preferences = getSharedPreferences("miituo", Context.MODE_PRIVATE);
@@ -161,12 +161,12 @@ public class LastOdometerActivity extends AppCompatActivity {
 
             TextView title = (TextView)dialog.findViewById(R.id.textView42);
             TextView title1 = (TextView)dialog.findViewById(R.id.textView43);
-            TextView title2 = (TextView)dialog.findViewById(R.id.textView45);
+            //TextView title2 = (TextView)dialog.findViewById(R.id.textView45);
             TextView title3 = (TextView)dialog.findViewById(R.id.textView46);
 
             title.setTypeface(typeface);
             title1.setTypeface(typeface);
-            title2.setTypeface(typeface);
+            //title2.setTypeface(typeface);
             title3.setTypeface(typeface);
 
             //buttons actiosn

@@ -1,7 +1,7 @@
 package com.miituo.atlaskm;
 
 import android.os.AsyncTask;
-import miituo.com.miituo.activities.VehiclePictures;
+import com.miituo.atlaskm.activities.VehiclePictures;
 
 /**
  * Created by john.cristobal on 08/01/18.

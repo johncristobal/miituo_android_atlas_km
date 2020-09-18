@@ -143,17 +143,17 @@ public class SyncActivity extends AppCompatActivity {
         hola = (TextView) findViewById(R.id.textView3);
         hola1 = (TextView) findViewById(R.id.textView2);
         hola2 = (TextView) findViewById(R.id.textView7);
-        hola3 = (TextView) findViewById(R.id.textView5);
+        //hola3 = (TextView) findViewById(R.id.textView5);
         hola4 = (TextView) findViewById(R.id.textView10);
         hola5 = (TextView) findViewById(R.id.textView13);
         hola6 = (TextView) findViewById(R.id.textView16);
         TextView hola14 = (TextView) findViewById(R.id.textView14);
         hola17 = (TextView) findViewById(R.id.textView17);
         b4 = (TextView) findViewById(R.id.button4);
-        cntHola = (LinearLayout) findViewById(R.id.cntHola);
-        cntPromo = (LinearLayout) findViewById(R.id.cntPromo);
-        lbVigencia = (TextView) findViewById(R.id.lbVigencia);
-        imgPromo = (ImageView) findViewById(R.id.imgPromo);
+        //cntHola = (LinearLayout) findViewById(R.id.cntHola); no se encontro el elemento
+        //cntPromo = (LinearLayout) findViewById(R.id.cntPromo); no se encontro el elemento
+        //lbVigencia = (TextView) findViewById(R.id.lbVigencia); no se encontro el elemento
+        //imgPromo = (ImageView) findViewById(R.id.imgPromo); no se encontro el elemento
 
         b4.setTypeface(typeface, Typeface.BOLD);
         hola.setTypeface(typeface);
@@ -269,6 +269,7 @@ public class SyncActivity extends AppCompatActivity {
             }
         }
     }
+
     private void pintaCupon(){
         kms=0;
         codigoCupon="";

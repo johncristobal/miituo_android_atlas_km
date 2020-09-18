@@ -18,10 +18,11 @@ public class AvisoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aviso);
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Aviso de privacidad");
         toolbar.setTitleTextColor(Color.BLACK);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);*/
 
         //get back arrow
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

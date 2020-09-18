@@ -26,10 +26,10 @@ import org.json.JSONArray;
 import java.util.ArrayList;
 import java.util.List;
 
-import miituo.com.miituo.R;
-import miituo.com.miituo.api.ApiClient;
-import miituo.com.miituo.cotizar.ApiClientCotiza;
-import miituo.com.miituo.utils.Evento;
+import com.miituo.atlaskm.R;
+import com.miituo.atlaskm.api.ApiClient;
+import com.miituo.atlaskm.cotizar.ApiClientCotiza;
+import com.miituo.atlaskm.utils.Evento;
 
 public class AseguradorasActivity extends AppCompatActivity implements View.OnClickListener{
     public Typeface tipo;
@@ -47,10 +47,13 @@ public class AseguradorasActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aseguradoras);
+        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Contratar");
         toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);
+        */
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         tipo = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");

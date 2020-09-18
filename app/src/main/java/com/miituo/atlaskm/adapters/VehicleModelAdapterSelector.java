@@ -108,7 +108,7 @@ public class VehicleModelAdapterSelector extends BaseAdapter {
         return v;
     }
 
-    private void pintaImg(ImageView iv, int id) {
+    private void pintaImg(final ImageView iv, int id) {
 
         //ruta del archivo...https://filesdev.miituo.com/21/FROM_VEHICLE.png
 

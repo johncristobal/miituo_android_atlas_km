@@ -106,10 +106,11 @@ public class VehiclePictures extends AppCompatActivity {
 
         setContentView(R.layout.activity_vehicle_pictures);
 
+        /* color del toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Fotografías");
         toolbar.setTitleTextColor(Color.BLACK);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);*/
 
         //get back arrow
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -173,7 +174,7 @@ public class VehiclePictures extends AppCompatActivity {
         }
         */
         //inicializa imagens con clicklistener
-        TextView leyenda = (TextView)findViewById(R.id.leyenda);
+        //TextView leyenda = (TextView)findViewById(R.id.leyenda);
         TextView res = (TextView)findViewById(R.id.textView36);
 
         Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
