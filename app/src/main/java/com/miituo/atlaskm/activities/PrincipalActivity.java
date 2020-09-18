@@ -631,8 +631,8 @@ public class PrincipalActivity extends AppCompatActivity
         ClientMovil cli = new ClientMovil();
         cli.setDatacelphone(celData);
         cli.setCelphone(app_preferences.getString("Celphone", "0"));
-        String token = FirebaseInstanceId.getInstance().getToken();
-        cli.setToken(token);
+        //String token = FirebaseInstanceId.getInstance().getToken();
+        //cli.setToken(token);
 
         //send token firebase to server...
         new PutTokenSync("ClientUser", PrincipalActivity.this, cli, tokencliente, (status, res) -> {

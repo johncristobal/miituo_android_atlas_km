@@ -34,4 +34,5 @@
     <string name="tel_ana">018009112627</string>
     <string name="tel_gnp">tel gnp</string>
     <string name="dbversion">25</string>
+    <string name="asset_statements">" [{             \"relation\": [\"delegate_permission/common.handle_all_urls\"],             \"target\": {                 \"namespace\": \"web\",                 \"site\": \"https://websitedev2019.miituo.com/Cotizar\"}         }]"</string>
 </resources>

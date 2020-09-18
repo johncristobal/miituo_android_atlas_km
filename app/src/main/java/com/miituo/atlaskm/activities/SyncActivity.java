@@ -140,9 +140,9 @@ public class SyncActivity extends AppCompatActivity {
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         Typeface typeface2 = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
 
-        hola = (TextView) findViewById(R.id.textView3);
-        hola1 = (TextView) findViewById(R.id.textView2);
-        hola2 = (TextView) findViewById(R.id.textView7);
+       // hola = (TextView) findViewById(R.id.textView3);
+       // hola1 = (TextView) findViewById(R.id.textView2);
+       // hola2 = (TextView) findViewById(R.id.textView7);
         //hola3 = (TextView) findViewById(R.id.textView5);
         hola4 = (TextView) findViewById(R.id.textView10);
         hola5 = (TextView) findViewById(R.id.textView13);
@@ -156,10 +156,10 @@ public class SyncActivity extends AppCompatActivity {
         //imgPromo = (ImageView) findViewById(R.id.imgPromo); no se encontro el elemento
 
         b4.setTypeface(typeface, Typeface.BOLD);
-        hola.setTypeface(typeface);
-        hola1.setTypeface(typeface);
-        hola2.setTypeface(typeface2);
-        hola3.setTypeface(typeface);
+       // hola.setTypeface(typeface);
+        //hola1.setTypeface(typeface);
+        //hola2.setTypeface(typeface2);
+        //hola3.setTypeface(typeface);
         hola4.setTypeface(typeface);
         hola5.setTypeface(typeface);
         hola6.setTypeface(typeface);

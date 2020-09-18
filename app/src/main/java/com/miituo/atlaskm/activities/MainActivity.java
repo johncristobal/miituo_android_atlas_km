@@ -48,8 +48,8 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String tokenF = FirebaseInstanceId.getInstance().getToken();
-        print("token: " + tokenF);
+        //String tokenF = FirebaseInstanceId.getInstance().getToken();
+        //print("token: " + tokenF);
 
         base = new modelBase(getApplicationContext(), Integer.parseInt(getResources().getString(R.string.dbversion)));
         DBaseMethods.base = base;
