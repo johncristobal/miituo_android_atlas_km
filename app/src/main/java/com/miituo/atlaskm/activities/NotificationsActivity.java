@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -46,6 +47,7 @@ public class NotificationsActivity extends BaseActivity implements SimpleCallBac
     private Typeface typeface;
     private TextView lb1,lbAceptar;
     private LinearLayout cntNoNotificaciones;
+    private ImageButton back;
     private ListView listPush;
     private List<Notifications> ps=null;
     private PushAdapter vadapter;
@@ -71,11 +73,21 @@ public class NotificationsActivity extends BaseActivity implements SimpleCallBac
         lbAceptar.setTypeface(typeface);
         cntNoNotificaciones=(LinearLayout)findViewById(R.id.cntNoPush);
         listPush=(ListView)findViewById(R.id.listPushes);
+        back = (ImageButton)findViewById(R.id.BackButton);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
         try {
             ps= getHelper().getDaoNotifications().queryForAll();
             if(ps==null || ps.size()<1){
                 cntNoNotificaciones.setVisibility(View.VISIBLE);
+
                 lbAceptar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

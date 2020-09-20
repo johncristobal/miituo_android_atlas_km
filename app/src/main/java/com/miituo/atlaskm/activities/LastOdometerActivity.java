@@ -72,6 +72,7 @@ public class LastOdometerActivity extends AppCompatActivity {
 
     public Typeface typeface;
     public Typeface typefacebold;
+    private ImageButton back;
 
     public String datoamount = "";
 
@@ -118,6 +119,15 @@ public class LastOdometerActivity extends AppCompatActivity {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inSampleSize = 4;
         Bitmap bmp = BitmapFactory.decodeFile(filePath,options);
+
+        back=(ImageButton)findViewById(R.id.BackButton);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         ImageView vistaodo = findViewById(R.id.imageView18);
         vistaodo.setImageBitmap(bmp);

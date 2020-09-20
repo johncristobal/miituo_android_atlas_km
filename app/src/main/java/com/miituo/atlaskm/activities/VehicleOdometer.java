@@ -70,7 +70,7 @@ import org.json.JSONObject;
 public class VehicleOdometer extends BaseActivity {
 
     public boolean flagodo = false;
-
+    private ImageButton back;
     private ImageView Img5;
     private Button btn6 =null;
     final int ODOMETER=5,CANCEL=9;
@@ -144,6 +144,14 @@ public class VehicleOdometer extends BaseActivity {
         res.setTypeface(typeface);
         TextView btnSinAuto = (TextView)findViewById(R.id.btnSinAuto);
         btnSinAuto.setTypeface(typeface);
+
+        back= (ImageButton)findViewById(R.id.BackButton);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         txtR = new TextRecognizer.Builder(this).build();
 

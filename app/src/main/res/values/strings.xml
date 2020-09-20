@@ -23,9 +23,9 @@
     <string name="tomar_fotografia">Tomar Fotografía</string>
     <string name="icon">icon</string>
     <string name="action_example">Example action</string>
-    <string name="title_home">Tu cotización</string>
-    <string name="title_dashboard">Tu auto</string>
-    <string name="title_notifications">Tus datos</string>
+    <string name="title_home">Polizas</string>
+    <string name="title_dashboard">Odómetro</string>
+    <string name="title_notifications">Siniestro</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sellect_anio">Por favor selecciona el año</string>
@@ -44,4 +44,5 @@
     <string name="title_activity_share_sm">ShareSMActivity</string>
     <string name="title_activity_planes">PlanesActivity</string>
     <string name="title_activity_last_odometer">LastOdometerActivity</string>
+    <string name="informacion"><![CDATA[Llámenos al <b>9177 5000</b> desde la Ciudad de\n México o al <b>01 800 849 39 16</b> desde el interior\nde la Republica en donde con gusto le atenderemos]]></string>
 </resources>

@@ -31,6 +31,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,6 +59,7 @@ public class VehiclePictures extends AppCompatActivity {
     public boolean flag1valida,flag2valida,flag3valida,flag4valida;
 
     private ImageView Img1,Img2,Img3,Img4,Img5;
+    private ImageButton back;
 
     private Button btn1,btn6 =null;
     private ApiClient api;
@@ -221,6 +223,15 @@ public class VehiclePictures extends AppCompatActivity {
         textry.setTypeface(typeface);
         textry = (TextView)dialog.findViewById(R.id.textView68);
         textry.setTypeface(typeface);
+
+        back=(ImageButton)findViewById(R.id.BackButton);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         TextView okbutton = (TextView)dialog.findViewById(R.id.textView70);
         okbutton.setTypeface(typeface);

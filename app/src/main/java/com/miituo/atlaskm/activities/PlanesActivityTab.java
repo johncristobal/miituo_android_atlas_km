@@ -77,6 +77,7 @@ public class PlanesActivityTab extends AppCompatActivity {
         mainView = findViewById(R.id.view);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        navigation.setItemIconTintList(null);
 
         context = this;
 

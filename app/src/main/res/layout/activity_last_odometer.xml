@@ -15,12 +15,52 @@
         tools:context="com.miituo.atlas.activities.LastOdometerActivity"
         tools:showIn="@layout/activity_last_odometer">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fotografias"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toEndOf="@+id/textView23"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/BackButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_volver" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:text="Pólizas"
+                android:textSize="15sp"
+                android:textColor="@color/azul_miituo"
+                app:layout_constraintStart_toEndOf="@+id/BackButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="150dp"
             android:text="Una vez más"
             android:textSize="24sp"
             android:layout_marginLeft="50dp" />
@@ -66,7 +106,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:layout_below="@+id/relativeLayout4"
             android:background="@drawable/button"
             android:onClick="validar"

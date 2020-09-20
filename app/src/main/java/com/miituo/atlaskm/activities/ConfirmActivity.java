@@ -25,6 +25,7 @@ import androidx.appcompat.widget.Toolbar;
 public class ConfirmActivity extends AppCompatActivity {
 
     private Typeface typeface;
+    private ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,14 @@ public class ConfirmActivity extends AppCompatActivity {
         leyenda.setTypeface(typeface);
         leyenda2.setTypeface(typeface);
         res.setTypeface(typeface);
+
+        back=(ImageButton)findViewById(R.id.BackButton);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         int a = IinfoClient.InfoClientObject.getPolicies().getLastOdometer();
 

@@ -48,8 +48,8 @@ public class CancelActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
          */
         //get back arrow
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
 

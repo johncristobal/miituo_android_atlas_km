@@ -177,19 +177,31 @@
         <receiver android:name=".Servicio.TimerBroadcastReceiver" />
 
         <activity android:name=".activities.DetallesPlanesActivity" />
-        <activity android:name=".activities.DetallesActivity" />
+
+        <activity android:name=".activities.DetallesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+
         <activity android:name=".activities.DescriptionSellector" />
         <activity android:name=".activities.DetallePlanActivity" />
         <activity android:name=".activities.CotizaActivity" />
         <activity android:name=".activities.ContratarActivity" />
-        <activity android:name=".activities.ContactaActivity" />
+
+        <activity
+            android:name=".activities.ContactaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name=".activities.ConfirmActivity"
             android:label="@string/title_activity_confirm"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".activities.CancelActivity" />
+        <activity android:name=".activities.CancelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".activities.CambioPagoActivity" />
 
         <activity

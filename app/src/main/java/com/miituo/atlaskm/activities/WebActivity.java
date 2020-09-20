@@ -108,8 +108,9 @@ public class WebActivity extends BaseActivity implements SimpleCallBack {
         //toolbar.setTitle("Cambiar método de pago");
         //toolbar.setTitleTextColor(Color.BLACK);
         //setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         wvPago = (WebView) findViewById(R.id.wvPago);
         cntTarjetas=(LinearLayout)findViewById(R.id.cntTarjetas);
         //cntAmex=(LinearLayout)findViewById(R.id.cntAmex); cuenta de american express

@@ -25,26 +25,41 @@
         android:layout_below="@+id/lbTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="35dp"
         android:layout_marginLeft="35dp"
-        android:text="Renovación de póliza"
-        android:textSize="17sp"
+        android:text="Su renovación está lista, la recibira el dia"
+        android:textSize="15sp"
         android:gravity="center"
         android:textColor="#000000"
         />
 
     <TextView
-        android:id="@+id/lb2"
+        android:id="@+id/lbfecha"
         android:layout_below="@+id/lb1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="35dp"
         android:layout_marginLeft="35dp"
-        android:text="Renovación de póliza"
-        android:textSize="17sp"
+        android:text="12 de mayo del 2019"
+        android:textStyle="bold"
+        android:textSize="15sp"
         android:gravity="center"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="0dp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:id="@+id/lb9"
+        android:layout_below="@+id/lbTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:text="Recuerde que después de su siguiente reporte\nharemos el cargo de:"
+        android:textSize="15sp"
+        android:gravity="center"
         android:textColor="#000000"
         />
 
@@ -55,7 +70,7 @@
         android:gravity="center"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="55dp"
         android:paddingBottom="7dp"
         android:paddingTop="7dp"
         android:paddingRight="40dp"
@@ -69,49 +84,66 @@
     <RelativeLayout
         android:id="@+id/cnt1"
         android:layout_width="match_parent"
-        android:layout_below="@id/lb2"
-        android:layout_marginTop="30dp"
-        android:background="#AAEFCDBC"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lb9"
+        android:layout_marginTop="40dp"
+        android:background="#AAEFCDBC">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            >
+            android:padding="10dp">
+
             <LinearLayout
                 android:id="@+id/cnt12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/lbPagoUnico"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Pago único"
                     android:gravity="center_horizontal|bottom"
-                    android:textSize="18sp"/>
+                    android:text="Pago único"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="17sp" />
+
                 <TextView
                     android:id="@+id/lbCosto"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="$561.00"
                     android:gravity="center_horizontal|bottom"
-                    android:textSize="22sp"/>
+                    android:text="$561.00"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
             </LinearLayout>
+
             <TextView
                 android:id="@+id/lbSeguro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="11sp"
                 android:layout_below="@+id/cnt12"
                 android:layout_marginTop="15dp"
                 android:text="Seguro de responsabilidad civil"
-                />
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/lbPago1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbSeguro"
+                android:layout_marginTop="5dp"
+                android:text="Derecho de póliza"
+                android:textSize="12sp" />
+
+
         </RelativeLayout>
     </RelativeLayout>
 
@@ -155,6 +187,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-5dp"
                     android:text="Plan amplio"
+                    android:textStyle="bold"
                     android:textColor="#000000"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -172,6 +205,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal|bottom"
                     android:text="$561.00"
+                    android:textStyle="bold"
                     android:textColor="#000000"
                     android:textSize="20sp" />
 
@@ -189,7 +223,7 @@
     <LinearLayout
         android:id="@+id/cntCancelar"
         android:layout_width="match_parent"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="40dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cnt2"
         android:gravity="center_horizontal"
@@ -204,11 +238,11 @@
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:lineSpacingMultiplier="1.4"
-            android:text="Si no desea renovar su póliza llámenos al
-9177 5000 desde la Ciudad de México o al
+            android:text="Si no desea renovar su póliza llámenos al\n
+9177 5000 desde la Ciudad de México o al\n
 01 800 849 39 16 desde interior de la República"
             android:gravity="center"
-            android:textSize="16sp" />
+            android:textSize="15sp" />
 
     </LinearLayout>
 

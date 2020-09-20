@@ -18,6 +18,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -43,6 +44,7 @@ public class DetallesActivity extends AppCompatActivity {
     ViewPager viewPager;
     PagerAdapter adapter;
     private Typeface typeface, typefacebold;
+    private ImageButton back;
     public static File pdf;
     public static AlertDialog alertaPago;
     public String pathPhotos = new ApiClient(this).pathPhotos;
@@ -63,28 +65,29 @@ public class DetallesActivity extends AppCompatActivity {
         toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);*/
         //get back arrow
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("").setIcon(R.drawable.general));
+        tabLayout.addTab(tabLayout.newTab().setText("").setIcon(R.drawable.poliza));
         //tabLayout.addTab(tabLayout.newTab().setText("").setIcon(R.drawable.historial));
-        tabLayout.addTab(tabLayout.newTab().setText("").setIcon(R.drawable.odo));
+        tabLayout.addTab(tabLayout.newTab().setText("").setIcon(R.drawable.odom));
         //tabLayout.addTab(tabLayout.newTab().setText("").setIcon(R.drawable.pago));
-        tabLayout.addTab(tabLayout.newTab().setText("").setIcon(R.drawable.sini));
+        tabLayout.addTab(tabLayout.newTab().setText("").setIcon(R.drawable.siniestro));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-        tabLayout.setSelectedTabIndicatorColor(Color.rgb(34,201,252));
+        tabLayout.setSelectedTabIndicatorColor(Color.rgb(255,153,51));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
                 //change icon
                 if(tab.getPosition()==0){
-                    tab.setIcon(R.drawable.general);
+                    tab.setIcon(R.drawable.poliza);
                 }else if(tab.getPosition()==1){
-                    tab.setIcon(R.drawable.odoaz);
+                    tab.setIcon(R.drawable.odom);
                 }else if(tab.getPosition()==2){
-                    tab.setIcon(R.drawable.sinia);
+                    tab.setIcon(R.drawable.siniestro);
                 }
             }
 
@@ -92,11 +95,11 @@ public class DetallesActivity extends AppCompatActivity {
             public void onTabUnselected(TabLayout.Tab tab) {
                 //change icon
                 if(tab.getPosition()==0){
-                    tab.setIcon(R.drawable.generalg);
+                    tab.setIcon(R.drawable.poliza);
                 }else if(tab.getPosition()==1){
-                    tab.setIcon(R.drawable.odo);
+                    tab.setIcon(R.drawable.odom);
                 }else if(tab.getPosition()==2){
-                    tab.setIcon(R.drawable.sini);
+                    tab.setIcon(R.drawable.siniestro);
                 }
             }
 
@@ -110,6 +113,15 @@ public class DetallesActivity extends AppCompatActivity {
         adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount(),this,typeface,typefacebold,starttime,viewPager);
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        back = (ImageButton)findViewById(R.id.BackButton);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     public void init(){

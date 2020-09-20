@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/cotizacion"
-        android:icon="@drawable/cotizacion"
+        android:icon="@mipmap/poliza"
         android:title="@string/title_home" />
 
     <item
         android:id="@+id/auto"
-        android:icon="@drawable/carrito"
+        android:icon="@drawable/odom"
         android:title="@string/title_dashboard" />
 
     <item
         android:id="@+id/datos"
-        android:icon="@drawable/autos"
+        android:icon="@drawable/siniestro"
         android:title="@string/title_notifications" />
 
 </menu>

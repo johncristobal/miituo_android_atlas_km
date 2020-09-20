@@ -10,8 +10,10 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +31,7 @@ public class ContactaActivity extends AppCompatActivity {
     public Typeface typeface;
     private TextView lbQuestion,lbFindUs,lbT1,lbT2,lbE,lbAddress;
     private ImageView face,twit,link,inst;
+    private ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,19 +45,20 @@ public class ContactaActivity extends AppCompatActivity {
 
          */
         //get back arrow
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
         typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
-        lbQuestion=findViewById(R.id.lbQuestion);
-        lbQuestion.setTypeface(typeface,Typeface.BOLD);
+        //lbQuestion=findViewById(R.id.lbQuestion);
+        //lbQuestion.setTypeface(typeface,Typeface.BOLD);
         //lbFindUs=findViewById(R.id.lbFindUs);
         //lbFindUs.setTypeface(typeface,Typeface.BOLD);
         //lbAddress=findViewById(R.id.lbAddress);
         //lbAddress.setTypeface(typeface);
         lbT1=findViewById(R.id.lbT1);
         lbT1.setTypeface(typeface);
+        lbT1.setText(Html.fromHtml(getResources().getString(R.string.informacion)));
         //lbT2=findViewById(R.id.lbT2);
-        lbT2.setTypeface(typeface,Typeface.BOLD);
+        //lbT2.setTypeface(typeface,Typeface.BOLD);
         lbE=findViewById(R.id.lbE);
         lbE.setTypeface(typeface,Typeface.BOLD);
 
@@ -62,12 +66,20 @@ public class ContactaActivity extends AppCompatActivity {
         //twit=findViewById(R.id.imgTwit);
         //link=findViewById(R.id.imgInk);
         //inst=findViewById(R.id.imgIns);
+        back= (ImageButton)findViewById(R.id.BackButton);
 
-        lbAddress.setText("Bosque de Duraznos 61 Piso 12\n" +
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        /*lbAddress.setText("Bosque de Duraznos 61 Piso 12\n" +
                 "Col. Bosques de las Lomas  11700,\n" +
-                "Ciudad de México");
+                "Ciudad de México");*/
 
-        face.setOnClickListener(new View.OnClickListener() {
+    /*        face.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(newFacebookIntent());
@@ -123,7 +135,7 @@ public class ContactaActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             }
-        });
+        });*/
 
     }
 
@@ -168,7 +180,7 @@ public class ContactaActivity extends AppCompatActivity {
 
         telefon = "(55)8421 0500";
 
-        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "(55)8421 0500"));
+        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "(55)9177 5000"));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             String[] PERMISSIONS = {Manifest.permission.CALL_PHONE};
             ActivityCompat.requestPermissions((Activity) this, PERMISSIONS, REQUEST);
@@ -179,7 +191,7 @@ public class ContactaActivity extends AppCompatActivity {
 
     public void callDos(View view) {
         telefon = "(01 800 953 0059";
-        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "01 800 953 0059"));
+        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "01 800 849 3916"));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             String[] PERMISSIONS = {Manifest.permission.CALL_PHONE};
             ActivityCompat.requestPermissions(this, PERMISSIONS, REQUEST);

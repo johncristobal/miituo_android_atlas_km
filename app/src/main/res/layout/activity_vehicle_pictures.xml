@@ -7,6 +7,7 @@
     tools:context="com.miituo.atlaskm.activities.VehiclePictures">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout9"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"
@@ -15,17 +16,60 @@
         tools:context="com.miituo.atlas.activities.VehiclePictures"
         tools:showIn="@layout/activity_vehicle_pictures">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fotografias"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toEndOf="@+id/textView23"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/BackButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_volver" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="Pólizas"
+                android:textSize="15sp"
+                android:textColor="@color/azul_miituo"
+                app:layout_constraintStart_toEndOf="@+id/BackButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginLeft="5dp"
-            android:layout_alignParentTop="true"
             android:layout_alignLeft="@+id/gridLayout"
-            android:layout_alignRight="@+id/gridLayout">
+            android:layout_alignRight="@+id/gridLayout"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="100dp"
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -38,11 +82,11 @@
                 android:id="@+id/textView36"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="30dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
                 android:layout_toRightOf="@+id/imageView3"
                 android:text="Vamos a tomar cuatro fotos para registrar su auto asegurado."
                 android:textSize="15sp" />
@@ -54,21 +98,21 @@
             android:id="@+id/gridLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
             android:layout_weight="0.3"
             android:columnCount="2"
             android:orientation="horizontal"
-            android:rowCount="2"
-            android:layout_marginTop="17dp"
-            android:layout_below="@+id/relativeLayout"
-            android:layout_centerHorizontal="true">
+            android:rowCount="2">
 
             <ImageView
                 android:id="@+id/Img1"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
+                android:layout_row="0"
                 android:layout_column="0"
                 android:layout_margin="5dp"
-                android:layout_row="0"
                 android:adjustViewBounds="true"
                 android:contentDescription="Frontal"
                 app:srcCompat="@drawable/frontal" />
@@ -77,9 +121,9 @@
                 android:id="@+id/Img2"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
+                android:layout_row="0"
                 android:layout_column="1"
                 android:layout_margin="5dp"
-                android:layout_row="0"
                 android:adjustViewBounds="true"
                 android:contentDescription="Lateral Izquierda"
                 app:srcCompat="@drawable/laterald" />
@@ -88,9 +132,9 @@
                 android:id="@+id/Img3"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
+                android:layout_row="1"
                 android:layout_column="0"
                 android:layout_margin="5dp"
-                android:layout_row="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="Trasera"
                 app:srcCompat="@drawable/partetrasera" />
@@ -99,9 +143,9 @@
                 android:id="@+id/Img4"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
+                android:layout_row="1"
                 android:layout_column="1"
                 android:layout_margin="5dp"
-                android:layout_row="1"
                 android:adjustViewBounds="true"
                 android:contentDescription="Lateral Derecho"
                 app:srcCompat="@drawable/laterali" />
@@ -111,13 +155,13 @@
             android:id="@+id/btn1"
             android:layout_width="165dp"
             android:layout_height="30dp"
-            android:layout_marginBottom="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="65dp"
             android:background="@drawable/button"
             android:onClick="subirFotos"
             android:text="Continuar"
-            android:textColor="@android:color/white"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+            android:textColor="@android:color/white" />
 
 
     </RelativeLayout>
