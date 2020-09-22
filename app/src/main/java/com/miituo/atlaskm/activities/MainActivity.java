@@ -91,26 +91,17 @@ public class MainActivity extends BaseActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        /*
-        mVideoView = (VideoView) findViewById(R.id.videoView);
-        String uri = "android.resource://" + getPackageName() + "/" + R.raw.logo_ani_miituo;
-        if (mVideoView != null) {
-            mVideoView.setVideoURI(Uri.parse(uri));
-            mVideoView.setZOrderOnTop(true);
-            mVideoView.requestFocus();
-            mVideoView.start();
-        }*/
+
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-//                startActivity(new Intent(getApplicationContext(),MapsActivity.class));
                 if (sesion.equals("1")) {
                     Intent i = new Intent(getApplicationContext(), SyncActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     finish();
                     startActivity(i);
                 } else {
-                    Intent i = new Intent(getApplicationContext(), TutorialActivity.class);
+                    Intent i = new Intent(getApplicationContext(), SyncActivity.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     finish();
                     startActivity(i);

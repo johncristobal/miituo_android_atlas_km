@@ -25,25 +25,11 @@ import static com.miituo.atlaskm.fragments.PagerAdapter.pager;
 
 public class TabFragment2 extends Fragment {
 
-    Typeface tipo;
-
-    /*public TabFragment2(Typeface t){
-        tipo = t;
-    }*/
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_tab2, container, false);
 
-        TextView tex = (TextView)v.findViewById(R.id.textView);
-        tex.setTypeface(PagerAdapter.tipo);
-        tex = (TextView)v.findViewById(R.id.textView78);
-        tex.setTypeface(PagerAdapter.tipo);
-
         TextView fecha = (TextView)v.findViewById(R.id.texdate);
-        //TextView fechaabajo = (TextView)v.findViewById(R.id.textView80); revisar que hace esta fecha... se comento todo lo que indica fecha abajo
-        fecha.setTypeface(PagerAdapter.tipobold);
-        //fechaabajo.setTypeface(PagerAdapter.tipobold);
 
         Button b1 = v.findViewById(R.id.button13);
         b1.setOnClickListener(new View.OnClickListener() {

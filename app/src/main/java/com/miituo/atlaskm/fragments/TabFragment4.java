@@ -27,13 +27,6 @@ import com.miituo.atlaskm.multiaseguradora.Aseguradoras;
 
 public class TabFragment4 extends Fragment {
 
-    Context context;
-    Typeface tipo;
-
-    /*public TabFragment4(Context c,Typeface t){
-        context = c;
-        tipo = t;
-    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,10 +34,7 @@ public class TabFragment4 extends Fragment {
 
         Button call = (Button)v.findViewById(R.id.button6);
         TextView res = (TextView)v.findViewById(R.id.textView56);
-        TextView fon = (TextView)v.findViewById(R.id.textView);
 
-        res.setTypeface(PagerAdapter.tipo);
-        fon.setTypeface(PagerAdapter.tipo);
         ImageView iconAseguradora=(ImageView)v.findViewById(R.id.imageView8);
 
         final String noAseguradora;  // atlas

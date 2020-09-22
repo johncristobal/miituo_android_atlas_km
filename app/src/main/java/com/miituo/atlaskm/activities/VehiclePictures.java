@@ -87,7 +87,6 @@ public class VehiclePictures extends AppCompatActivity {
 
     public File photoFile = null;
     public String mCurrentPhotoPath;
-    private Typeface typeface;
 
     public String polizaFolio,tok;
 
@@ -107,16 +106,6 @@ public class VehiclePictures extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_vehicle_pictures);
-
-        /* color del toolbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Fotografías");
-        toolbar.setTitleTextColor(Color.BLACK);
-        setSupportActionBar(toolbar);*/
-
-        //get back arrow
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         polizaFolio = IinfoClient.getInfoClientObject().getPolicies().getNoPolicy();
         tok = IinfoClient.getInfoClientObject().getClient().getToken();
@@ -177,13 +166,6 @@ public class VehiclePictures extends AppCompatActivity {
         */
         //inicializa imagens con clicklistener
         //TextView leyenda = (TextView)findViewById(R.id.leyenda);
-        TextView res = (TextView)findViewById(R.id.textView36);
-
-        Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
-
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
-        //leyenda.setTypeface(typeface);
-        res.setTypeface(typeface);
 
         app_preferences= getSharedPreferences("miituo", Context.MODE_PRIVATE);
 
@@ -199,31 +181,6 @@ public class VehiclePictures extends AppCompatActivity {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.mensaje_fotos);
 
-        TextView textry = (TextView)dialog.findViewById(R.id.textView48);
-        textry.setTypeface(typeface);
-        textry = (TextView)dialog.findViewById(R.id.textView49);
-        textry.setTypeface(typeface);
-        textry = (TextView)dialog.findViewById(R.id.textView66);
-        textry.setTypeface(typeface);
-        textry = (TextView)dialog.findViewById(R.id.textView71);
-        textry.setTypeface(typeface);
-        textry = (TextView)dialog.findViewById(R.id.textView72);
-        textry.setTypeface(typefacebold);
-        textry = (TextView)dialog.findViewById(R.id.textView73);
-        textry.setTypeface(typeface);
-        textry = (TextView)dialog.findViewById(R.id.textView67);
-        textry.setTypeface(typeface);
-        textry = (TextView)dialog.findViewById(R.id.textView74);
-        textry.setTypeface(typefacebold);
-        textry = (TextView)dialog.findViewById(R.id.textView75);
-        textry.setTypeface(typeface);
-        textry = (TextView)dialog.findViewById(R.id.textView76);
-        textry.setTypeface(typefacebold);
-        textry = (TextView)dialog.findViewById(R.id.textView77);
-        textry.setTypeface(typeface);
-        textry = (TextView)dialog.findViewById(R.id.textView68);
-        textry.setTypeface(typeface);
-
         back=(ImageButton)findViewById(R.id.BackButton);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -234,7 +191,6 @@ public class VehiclePictures extends AppCompatActivity {
         });
 
         TextView okbutton = (TextView)dialog.findViewById(R.id.textView70);
-        okbutton.setTypeface(typeface);
         okbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -298,7 +254,7 @@ public class VehiclePictures extends AppCompatActivity {
                     }
                     // Continue only if the File was successfully created
                     if (photoFile != null) {
-                        Uri photoURI = FileProvider.getUriForFile(VehiclePictures.this, "miituo.com.miituo.provider", photoFile);
+                        Uri photoURI = FileProvider.getUriForFile(VehiclePictures.this, "com.miituo.atlaskm.provider", photoFile);
                         //Uri photoURI = Uri.fromFile(photoFile);
                         takepic.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                         startActivityForResult(takepic, PERMISO);

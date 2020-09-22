@@ -11,12 +11,10 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:paddingRight="15dp"
             android:paddingLeft="15dp"
-            android:paddingTop="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true">
+            android:paddingTop="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -25,7 +23,7 @@
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -40,21 +38,26 @@
                             android:id="@+id/lbDriver"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="left"
+                            android:gravity="start"
+                            android:fontFamily="@font/lato"
                             android:textColor="@color/colorGray"
                             android:text="Conductor"/>
                         <TextView
                             android:id="@+id/lbNameDriver"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:textColor="#000000"/>
+                            android:gravity="start"
+                            android:text="Name"
+                            android:theme="@style/textThemeSecondary"
+                            />
                         <TextView
                             android:id="@+id/lbCelDriver"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:textColor="#000000"/>
+                            android:gravity="start"
+                            android:text="Name"
+                            android:theme="@style/textThemeSecondary"
+                            />
                     </LinearLayout>
                     <View
                         android:layout_width="3dp"
@@ -64,7 +67,7 @@
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
                     android:layout_weight="1">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -80,20 +83,23 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Contratante"
+                            android:fontFamily="@font/lato"
                             android:textColor="@color/colorGray"
-                            android:gravity="left"/>
+                            android:gravity="start"/>
                         <TextView
                             android:id="@+id/lbNameContractor"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#000000"
-                            android:gravity="left"/>
+                            android:text="Name"
+                            android:theme="@style/textThemeSecondary"
+                            android:gravity="start"/>
                         <TextView
                             android:id="@+id/lbCelContractor"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#000000"
-                            android:gravity="left"/>
+                            android:text="Name"
+                            android:theme="@style/textThemeSecondary"
+                            android:gravity="start"/>
                     </LinearLayout>
                     <View
                         android:layout_width="3dp"
@@ -109,7 +115,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingLeft="20dp"
+                    android:paddingStart="20dp"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:gravity="center"
@@ -119,15 +125,18 @@
                         android:id="@+id/lbAuto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="left"
+                        android:gravity="start"
+                        android:fontFamily="@font/lato"
                         android:textColor="@color/colorGray"
                         android:text="Tu auto"/>
                     <TextView
                         android:id="@+id/lbAuto2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:textColor="#000000"/>
+                        android:gravity="start"
+                        android:text="Name"
+                        android:theme="@style/textThemeSecondary"
+                        />
                 </LinearLayout>
                 <View
                     android:layout_width="3dp"
@@ -159,15 +168,18 @@
                             android:id="@+id/lbPlacas"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="left"
+                            android:gravity="start"
+                            android:fontFamily="@font/lato"
                             android:textColor="@color/colorGray"
                             android:text="Placas"/>
                         <TextView
                             android:id="@+id/lbPlacas2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:gravity="left"
-                            android:textColor="#000000"/>
+                            android:gravity="start"
+                            android:text="Name"
+                            android:theme="@style/textThemeSecondary"
+                            />
                     </LinearLayout>
                     <View
                         android:layout_width="3dp"
@@ -177,7 +189,7 @@
                 <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
                     android:layout_weight="1">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -194,14 +206,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Modelo"
+                            android:fontFamily="@font/lato"
                             android:textColor="@color/colorGray"
-                            android:gravity="left"/>
+                            android:gravity="start"/>
                         <TextView
                             android:id="@+id/lbModelo2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#000000"
-                            android:gravity="left"/>
+                            android:text="Name"
+                            android:theme="@style/textThemeSecondary"
+                            android:gravity="start"/>
                     </LinearLayout>
                     <View
                         android:layout_width="3dp"
@@ -227,19 +241,22 @@
                         android:id="@+id/lbLastReport"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="left"
+                        android:gravity="start"
+                        android:fontFamily="@font/lato"
                         android:textColor="@color/colorGray"
                         android:text="Último reporte odómetro"/>
                     <TextView
                         android:id="@+id/lbLastReport2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:layout_alignParentLeft="true"
+                        android:gravity="start"
+                        android:layout_alignParentStart="true"
                         android:layout_marginTop="2dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
                         android:layout_below="@+id/lbLastReport"
-                        android:textColor="#000000"/>
+                        android:text="Name"
+                        android:theme="@style/textThemeSecondary"
+                        />
                 </RelativeLayout>
                 <View
                     android:layout_width="3dp"
@@ -260,46 +277,47 @@
                     android:layout_width="0dp"
                     android:layout_height="55dp"
                     android:layout_weight="1"
-                    android:layout_marginRight="5dp"
-                    android:paddingLeft="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:paddingStart="15dp"
                     android:gravity="center_vertical"
                     android:background="#FFFFFF"
                     android:orientation="horizontal">
                     <ImageView
                         android:layout_width="38dp"
                         android:layout_height="38dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
                         app:srcCompat="@drawable/cambiar_pago"/>
                     <TextView
                         android:id="@+id/lbCambioPago"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#000000"
+                        android:theme="@style/textThemeSecondary"
                         android:text="Cambiar método de pago"
-                        android:gravity="left|center_vertical"/>
+                        android:gravity="start|center_vertical"/>
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/lbLastReport3"
                     android:layout_width="0dp"
                     android:layout_height="55dp"
                     android:layout_weight="1"
-                    android:layout_marginLeft="5dp"
-                    android:paddingLeft="15dp"
+                    android:layout_marginStart="5dp"
+                    android:paddingStart="15dp"
                     android:gravity="center_vertical"
                     android:background="#FFFFFF"
                     android:orientation="horizontal">
                     <ImageView
                         android:layout_width="38dp"
                         android:layout_height="38dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
                         app:srcCompat="@drawable/edo_cta"/>
                     <TextView
                         android:id="@+id/lbEdoCta"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="left|center_vertical"
+                        android:gravity="start|center_vertical"
                         android:text="Estado de cuenta"
-                        android:textColor="#000000"/>
+                        android:theme="@style/textThemeSecondary"
+                        />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

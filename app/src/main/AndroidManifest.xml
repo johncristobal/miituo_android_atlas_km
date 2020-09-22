@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -66,15 +67,14 @@
 
         <activity
             android:name=".activities.VehiclePictures"
-           />
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
             android:name=".activities.VehicleOdometer"
             android:configChanges="screenLayout|orientation|screenSize"
             android:label="@string/title_activity_vehicle_odometer"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
             android:name=".activities.UnavailableSite"

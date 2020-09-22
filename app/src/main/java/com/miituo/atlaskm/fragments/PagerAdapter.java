@@ -16,17 +16,13 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     int mNumOfTabs;
     public static Context context;
-    public static Typeface tipo;
-    public static Typeface tipobold;
     public static long tiempo;
     public static ViewPager pager;
 
-    public PagerAdapter(FragmentManager fm, int NumOfTabs, Context c, Typeface t, Typeface tb, long tiempo, ViewPager vp) {
+    public PagerAdapter(FragmentManager fm, int NumOfTabs, Context c, long tiempo, ViewPager vp) {
         super(fm);
         this.mNumOfTabs = NumOfTabs;
         context = c;
-        tipo = t;
-        tipobold = tb;
         this.tiempo = tiempo;
         pager = vp;
     }

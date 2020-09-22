@@ -61,8 +61,8 @@ public class PDFViewer extends BaseActivity implements OnPageChangeListener,OnLo
         toolbar.setTitleTextColor(Color.BLACK);
         setSupportActionBar(toolbar);
          */
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         pdfView= (PDFView)findViewById(R.id.pdfView);
         displayPDF();

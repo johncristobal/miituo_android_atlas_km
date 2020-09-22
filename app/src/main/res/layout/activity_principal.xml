@@ -16,21 +16,13 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:itemIconTint="@color/azul_miituo"
+        app:itemIconTint="@color/naranjaatlas"
         android:fitsSystemWindows="true" >
 
         <include layout="@layout/nav_header_principal" />
-
-        <!--ListView
-            android:id="@+id/lst_menu_items"
-            android:layout_width="match_parent"
-            android:layout_height="546dp"
-            android:layout_weight="1" >
-
-        </ListView-->
 
     </com.google.android.material.navigation.NavigationView>
 

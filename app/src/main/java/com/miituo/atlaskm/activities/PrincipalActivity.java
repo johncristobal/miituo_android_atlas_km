@@ -92,7 +92,7 @@ import org.json.JSONObject;
 public class PrincipalActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, CallBack {
 
-    public Timer timer;
+    //public Timer timer;
 
     private ListView vList;
     private VehicleModelAdapter vadapter;
@@ -107,7 +107,7 @@ public class PrincipalActivity extends AppCompatActivity
     ImageView imgSinPolizas;
 
     DrawerLayout drawer;
-    private Typeface typeface;
+    //private Typeface typeface;
 
     private SwipeRefreshLayout swipeContainer;
 
@@ -149,7 +149,7 @@ public class PrincipalActivity extends AppCompatActivity
 
         app_preferences = getSharedPreferences("miituo", Context.MODE_PRIVATE);
         starttime = app_preferences.getLong("time", 0);
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
+        //typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         app_preferences.edit().putString("solofotos", "0").apply();
 
         configurarAlmacenamiento();
@@ -177,19 +177,17 @@ public class PrincipalActivity extends AppCompatActivity
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
 
-        Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
+        //Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
 
         sinPolizas = (TextView) findViewById(R.id.lbSinPolizas);
         imgSinPolizas = (ImageView) findViewById(R.id.imgSinPolizas);
-        sinPolizas.setTypeface(typeface);
+        //sinPolizas.setTypeface(typeface);
         nombre = (TextView) findViewById(R.id.textViewNombreleo);
         nombre.setText(app_preferences.getString("nombre", "null"));
-        nombre.setTypeface(typefacebold);
         nombre = (TextView) findViewById(R.id.textViewNombre);
         nombre.setText(app_preferences.getString("nombre", "null"));
 
         TextView hola = (TextView) findViewById(R.id.textView35);
-        hola.setTypeface(typefacebold);
         resumen = (TextView) findViewById(R.id.textView25);
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -204,9 +202,9 @@ public class PrincipalActivity extends AppCompatActivity
         navigationView.setItemIconTintList(null);
 
         TextView cerrar = (TextView) findViewById(R.id.textView62);
-        cerrar.setTypeface(typeface);
+        //cerrar.setTypeface(typeface);
         TextView cotizar = (TextView) findViewById(R.id.textView16);
-        cotizar.setTypeface(typeface);
+        //cotizar.setTypeface(typeface);
         cotizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -303,7 +301,7 @@ public class PrincipalActivity extends AppCompatActivity
         if (result != null) {
             vList = (ListView) findViewById(R.id.listviewinfoclient);
             removeInvalidPolicies();
-            vadapter = new VehicleModelAdapter(getApplicationContext(), result, typeface, starttime, this);
+            vadapter = new VehicleModelAdapter(getApplicationContext(), result, starttime, this);
             vadapter.notifyDataSetChanged();
             vList.setAdapter(vadapter);
 
@@ -325,15 +323,16 @@ public class PrincipalActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        pageSwitcher();
-        obtenerCupon();
+        //pageSwitcher();
+        //obtenerCupon();
+        managePushIndicator();
         sendTokenFirebase();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        timer.cancel();
+        //timer.cancel();
     }
 
     @Override
@@ -385,6 +384,7 @@ public class PrincipalActivity extends AppCompatActivity
     int count = 0;
 
     //TODO - obtener cupon y mostrarlo en los banners---------------------------------------------------
+    /*
     public void obtenerCupon(){
         String url = "Cupon/getReferredClientCoupon/"+app_preferences.getString("Celphone", "0");
         GetCuponAsync gp = new GetCuponAsync(PrincipalActivity.this, url, new SimpleCallBack(){
@@ -454,6 +454,7 @@ public class PrincipalActivity extends AppCompatActivity
 
         managePushIndicator();
     }
+    */
 
     //TODO - colocar cantidad de push notifi en menu ---------------------------------------------------
     private void managePushIndicator() {
@@ -488,7 +489,7 @@ public class PrincipalActivity extends AppCompatActivity
         ListView lista = (ListView) findViewById(R.id.lst_menu_items);
         lista.setFastScrollEnabled(true);
         lista.setScrollingCacheEnabled(false);
-        menuadapter = new MenuAdapterSelf(getApplicationContext(), count, typeface);
+        menuadapter = new MenuAdapterSelf(getApplicationContext(), count);
         lista.setAdapter(menuadapter);
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -560,6 +561,7 @@ public class PrincipalActivity extends AppCompatActivity
         });
     }
 
+    /*
     public void pageSwitcher() {
         timer = new Timer(); // At this line a new Thread will be created
         timer.schedule(new RemindTask(), 9000, 9000);
@@ -580,6 +582,7 @@ public class PrincipalActivity extends AppCompatActivity
 
         }
     }
+    */
 
     private void addBottomDots(int currentPage) {
         dots = new TextView[2];
@@ -1077,48 +1080,46 @@ public class PrincipalActivity extends AppCompatActivity
                     sinPolizas.setVisibility(View.VISIBLE);
                     imgSinPolizas.setVisibility(View.VISIBLE);
                     swipeContainer.setVisibility(View.GONE);
-                    sinPolizas.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            new AvailableSiteSync(PrincipalActivity.this, new SimpleCallBack() {
-                                @Override
-                                public void run(boolean status, String res) {
+                    sinPolizas.setOnClickListener(v -> {
+                        new AvailableSiteSync(PrincipalActivity.this, new SimpleCallBack() {
+                            @Override
+                            public void run(boolean status, String res) {
 
-                                    if (!status) {
-                                        final AlertDialog.Builder builder = new AlertDialog.Builder(PrincipalActivity.this);
-                                        builder.setTitle("Alerta");
-                                        builder.setMessage("Error de conexión");
-                                        builder.setCancelable(false);
-                                        builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                alertaCotiz.dismiss();
-                                            }
-                                        });
-                                        alertaCotiz = builder.create();
-                                        alertaCotiz.show();
-                                    } else {
-                                        if (res.equalsIgnoreCase("0")) {
+                                if (!status) {
+                                    final AlertDialog.Builder builder = new AlertDialog.Builder(PrincipalActivity.this);
+                                    builder.setTitle("Alerta");
+                                    builder.setMessage("Error de conexión");
+                                    builder.setCancelable(false);
+                                    builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            alertaCotiz.dismiss();
+                                        }
+                                    });
+                                    alertaCotiz = builder.create();
+                                    alertaCotiz.show();
+                                } else {
+                                    if (res.equalsIgnoreCase("0")) {
 //                                            Intent i = new Intent(PrincipalActivity.this, CotizarAutoActivity.class);
 //                                            i.putExtra("isSimulacion", false);
 //                                            startActivity(i);
-                                            if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1){
-                                                Intent i = new Intent(PrincipalActivity.this, CotizarAutoActivity.class);
-                                                i.putExtra("isSimulacion", false);
-                                                startActivity(i);
-                                            }else{
-                                                Intent i = new Intent(PrincipalActivity.this, CotizaActivity.class);
-                                                i.putExtra("cliente",true);
-                                                startActivity(i);
-                                            }
-                                        } else {
-                                            Intent i = new Intent(PrincipalActivity.this, UnavailableSite.class);
-                                            i.putExtra("status", res);
+                                        if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1){
+                                            Intent i = new Intent(PrincipalActivity.this, CotizarAutoActivity.class);
+                                            i.putExtra("isSimulacion", false);
+                                            startActivity(i);
+                                        }else{
+                                            Intent i = new Intent(PrincipalActivity.this, CotizaActivity.class);
+                                            i.putExtra("cliente",true);
                                             startActivity(i);
                                         }
+                                    } else {
+                                        Intent i = new Intent(PrincipalActivity.this, UnavailableSite.class);
+                                        i.putExtra("status", res);
+                                        startActivity(i);
                                     }
                                 }
-                            }).execute();
+                            }
+                        }).execute();
 //                            Intent i = new Intent(PrincipalActivity.this,CotizarAutoActivity.class);
 //                            startActivity(i);
 //                            String urlString="https://miituo.com";
@@ -1132,7 +1133,6 @@ public class PrincipalActivity extends AppCompatActivity
 //                                intent.setPackage(null);
 //                                startActivity(intent);
 //                            }
-                        }
                     });
                     resumen.setText("Aun no tienes pólizas contratadas,\n" +
                             "puedes cotizar una en este momento");
@@ -1167,41 +1167,38 @@ public class PrincipalActivity extends AppCompatActivity
 
     public void getPolizasData(String telefono){
         String url = "InfoClientMobil/Celphone/"+telefono;
-        new GetPoliciesData(url, PrincipalActivity.this, new SimpleCallBack() {
-            @Override
-            public void run(boolean status, String res) {
-                if (!status){
-                    String data[] = res.split("@");
-                    launchAlert(data[1]);
+        new GetPoliciesData(url, PrincipalActivity.this, (SimpleCallBack) (status, res) -> {
+            if (!status){
+                String data[] = res.split("@");
+                launchAlert(data[1]);
+            }else{
+                //tenemos polizas, recuperamos list y mandamos a sms...
+                SharedPreferences.Editor editor = app_preferences.edit();
+                editor.putString("polizas", res);
+                editor.putString("Celphone", telefono);
+                editor.apply();
+
+                Gson parseJson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'hh:mm:ss").create();
+                List<InfoClient> InfoList = parseJson.fromJson(res, new TypeToken<List<InfoClient>>() {
+                }.getType());
+
+                final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
+                globalVariable.setPolizas(InfoList);
+
+                result = InfoList;
+                if (result.size() < 1) {
+                    showViews(true);
                 }else{
-                    //tenemos polizas, recuperamos list y mandamos a sms...
-                    SharedPreferences.Editor editor = app_preferences.edit();
-                    editor.putString("polizas", res);
-                    editor.putString("Celphone", telefono);
-                    editor.apply();
+                    showViews(false);
+                    String na = result.get(0).getClient().getName();
+                    app_preferences.edit().putString("nombre", na).apply();
 
-                    Gson parseJson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'hh:mm:ss").create();
-                    List<InfoClient> InfoList = parseJson.fromJson(res, new TypeToken<List<InfoClient>>() {
-                    }.getType());
-
-                    final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
-                    globalVariable.setPolizas(InfoList);
-
-                    result = InfoList;
-                    if (result.size() < 1) {
-                        showViews(true);
-                    }else{
-                        showViews(false);
-                        String na = result.get(0).getClient().getName();
-                        app_preferences.edit().putString("nombre", na).apply();
-
-                        vList = (ListView) findViewById(R.id.listviewinfoclient);
-                        removeInvalidPolicies();
-                        vadapter = new VehicleModelAdapter(getApplicationContext(), result, typeface, starttime, PrincipalActivity.this);
-                        vList.setAdapter(vadapter);
-                        vadapter.notifyDataSetChanged();
-                        swipeContainer.setRefreshing(false);
-                    }
+                    vList = (ListView) findViewById(R.id.listviewinfoclient);
+                    removeInvalidPolicies();
+                    vadapter = new VehicleModelAdapter(getApplicationContext(), result, starttime, PrincipalActivity.this);
+                    vList.setAdapter(vadapter);
+                    vadapter.notifyDataSetChanged();
+                    swipeContainer.setRefreshing(false);
                 }
             }
         }).execute();

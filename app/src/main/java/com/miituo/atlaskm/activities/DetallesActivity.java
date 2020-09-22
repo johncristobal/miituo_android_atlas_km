@@ -43,7 +43,6 @@ import static com.miituo.atlaskm.fragments.PagerAdapter.context;
 public class DetallesActivity extends AppCompatActivity {
     ViewPager viewPager;
     PagerAdapter adapter;
-    private Typeface typeface, typefacebold;
     private ImageButton back;
     public static File pdf;
     public static AlertDialog alertaPago;
@@ -55,19 +54,6 @@ public class DetallesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detalles);
         SharedPreferences app_preferences= getSharedPreferences("miituo", Context.MODE_PRIVATE);
         long starttime = app_preferences.getLong("time",0);
-
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
-        typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
-
-        /*
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbartaby);
-        toolbar.setTitle("General");
-        toolbar.setTitleTextColor(Color.BLACK);
-        setSupportActionBar(toolbar);*/
-        //get back arrow
-
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("").setIcon(R.drawable.poliza));
@@ -110,7 +96,7 @@ public class DetallesActivity extends AppCompatActivity {
         });
         init();
         viewPager = (ViewPager) findViewById(R.id.pager);
-        adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount(),this,typeface,typefacebold,starttime,viewPager);
+        adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount(),this,starttime,viewPager);
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
@@ -127,9 +113,7 @@ public class DetallesActivity extends AppCompatActivity {
     public void init(){
         TextView  lbDescargar= (TextView)findViewById(R.id.textView37);
         TextView poliza = (TextView)findViewById(R.id.textViewpolizadetail);
-        poliza.setTypeface(PagerAdapter.tipo);
         poliza.setText(IinfoClient.InfoClientObject.getPolicies().getNoPolicy());
-        lbDescargar.setTypeface(PagerAdapter.tipo);
         lbDescargar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

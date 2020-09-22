@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/rojo_miituo"
+    android:background="@drawable/backsplash"
     tools:context="com.miituo.atlaskm.activities.MainActivity">
 
     <ImageView
@@ -16,7 +16,7 @@
         android:paddingLeft="50dp"
         android:paddingTop="25dp"
         android:paddingBottom="25dp"
-        app:srcCompat="@drawable/logo_atlas_white"
+        app:srcCompat="@drawable/atlasxkmbn"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
 

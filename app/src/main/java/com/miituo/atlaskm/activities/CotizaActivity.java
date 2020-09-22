@@ -68,7 +68,8 @@ public class CotizaActivity extends AppCompatActivity {
         super.onResume();
 
         String url  = "Parameters/GetParameterByName/AppUrlAndroid";
-
+        inicializarWeb(new ApiClient(this).UrlCotiza);
+        /*
         GetUrlAsync gu = new GetUrlAsync(CotizaActivity.this, url, new SimpleCallBack(){
             @Override
             public void run(boolean status, String res) {
@@ -95,6 +96,7 @@ public class CotizaActivity extends AppCompatActivity {
             }
         });
         gu.execute();
+         */
     }
 
     public void inicializarWeb(String u){

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="transparent">#00FFFFFF</color>
-    <color name="colorPrimary">#f6f9fb</color>
+    <color name="colorPrimary">#e59232</color>
     <color name="colorPrimaryUnsellected">#f9f9f9</color>
     <color name="colorPrimarySellected">#f0fafc</color>
     <color name="colorPrimaryDark">#00C7FF</color>
@@ -16,6 +16,10 @@
     <color name="gris_miituo">#2f3033</color>
     <color name="beige_miituo">#d7d2cb</color>
     <color name="colorDarkGray">#898989</color>
+
+    <color name="rojoatlas">#ad0000</color>
+    <color name="naranjaatlas">#e59232</color>
+    <color name="grisatlas">#b2b2b2</color>
 
     <!-- Screens background color-->
     <color name="bg_screen1">#f64c73</color>

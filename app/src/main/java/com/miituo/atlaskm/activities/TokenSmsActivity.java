@@ -28,37 +28,14 @@ public class TokenSmsActivity extends AppCompatActivity {
 
     EditText token;
     SharedPreferences app_preferences;
-    private Typeface typeface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_token_sms);
 
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         token = (EditText)findViewById(R.id.editTextToken);
-
-        //TextView t1 = (TextView)findViewById(R.id.textView28);
-        //TextView t2 = (TextView)findViewById(R.id.textView29);
-        TextView t3 = (TextView)findViewById(R.id.textView32);
-        TextView t4 = (TextView)findViewById(R.id.textView33);
-        TextView t5 = (TextView)findViewById(R.id.textView34);
-        TextView t6 = (TextView)findViewById(R.id.textView59);
-
-        //t1.setTypeface(typeface);
-        //t2.setTypeface(typeface);
-        t3.setTypeface(typeface);
-        t4.setTypeface(typeface);
-        t5.setTypeface(typeface);
-        t6.setTypeface(typeface);
-
-        //TextView que es boton, hay que probar haber si funciona, o sino cambiarlo a boton
-        TextView b3 = (TextView)findViewById(R.id.button);
-        b3.setTypeface(typeface);
-
-        token.setTypeface(typeface);
         app_preferences= getSharedPreferences("miituo", Context.MODE_PRIVATE);
-
     }
 
     //*************************** Clic on enviar tokne*************************************************

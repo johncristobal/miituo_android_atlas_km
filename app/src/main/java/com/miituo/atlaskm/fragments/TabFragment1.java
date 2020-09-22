@@ -42,7 +42,6 @@ public class TabFragment1 extends Fragment {
     TextView lbAuto2, lbPlacas2, lbModelo2, lbLastReport2;
     LinearLayout lbLastReport3, btnCambioPago;
 
-    public Typeface tipo;
     public static AlertDialog alertaPago;
 
     @Override
@@ -51,37 +50,21 @@ public class TabFragment1 extends Fragment {
         View v = inflater.inflate(R.layout.fragment_tab1, container, false);
         expListView = new ExpandableListView(getContext());
         tDriver = v.findViewById(R.id.lbDriver);
-        tDriver.setTypeface(tipo);
         tContractor = v.findViewById(R.id.lbContractor);
-        tContractor.setTypeface(tipo);
         tAuto = v.findViewById(R.id.lbAuto);
-        tAuto.setTypeface(tipo);
         tPlacas = v.findViewById(R.id.lbPlacas);
-        tPlacas.setTypeface(tipo);
         tModelo = v.findViewById(R.id.lbModelo);
-        tModelo.setTypeface(tipo);
         tLastReport = v.findViewById(R.id.lbLastReport);
-        tLastReport.setTypeface(tipo);
         lbEdoCta = v.findViewById(R.id.lbEdoCta);
-        lbEdoCta.setTypeface(tipo);
         lbCambioPago = v.findViewById(R.id.lbCambioPago);
-        lbCambioPago.setTypeface(tipo);
         lbNameDriver = v.findViewById(R.id.lbNameDriver);
-        lbNameDriver.setTypeface(tipo);
         lbNameContractor = v.findViewById(R.id.lbNameContractor);
-        lbNameContractor.setTypeface(tipo);
         lbCelDriver = v.findViewById(R.id.lbCelDriver);
-        lbCelDriver.setTypeface(tipo);
         lbCelContractor = v.findViewById(R.id.lbCelContractor);
-        lbCelContractor.setTypeface(tipo);
         lbAuto2 = v.findViewById(R.id.lbAuto2);
-        lbAuto2.setTypeface(tipo);
         lbPlacas2 = v.findViewById(R.id.lbPlacas2);
-        lbPlacas2.setTypeface(tipo);
         lbModelo2 = v.findViewById(R.id.lbModelo2);
-        lbModelo2.setTypeface(tipo);
         lbLastReport2 = v.findViewById(R.id.lbLastReport2);
-        lbLastReport2.setTypeface(tipo);
         lbLastReport3 =(LinearLayout)  v.findViewById(R.id.lbLastReport3);
         btnCambioPago = (LinearLayout) v.findViewById(R.id.btnCambioPago);
         GetData();

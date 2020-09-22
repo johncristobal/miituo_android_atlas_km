@@ -87,7 +87,6 @@ public class VehicleOdometer extends BaseActivity {
 
     boolean IsTaken =false;
     Bitmap bmp;
-    private Typeface typeface;
 
     public String tipoodometro;
     SharedPreferences app_preferences;
@@ -137,13 +136,9 @@ public class VehicleOdometer extends BaseActivity {
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         tok = IinfoClient.getInfoClientObject().getClient().getToken();
 
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         TextView leyenda = (TextView)findViewById(R.id.textView40);
-        leyenda.setTypeface(typeface);
         TextView res = (TextView)findViewById(R.id.textView38);
-        res.setTypeface(typeface);
         TextView btnSinAuto = (TextView)findViewById(R.id.btnSinAuto);
-        btnSinAuto.setTypeface(typeface);
 
         back= (ImageButton)findViewById(R.id.BackButton);
         back.setOnClickListener(new View.OnClickListener() {
@@ -163,19 +158,6 @@ public class VehicleOdometer extends BaseActivity {
             btnSinAuto.setVisibility(View.INVISIBLE);
             btnSinAuto.setEnabled(false);
         }
-
-        //hay que poner titulo y boton de regreso...
-        //ImageButton back = (ImageButton)findViewById(R.id.imageView12);
-        /*back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });*/
-
-        Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
-        //TextView titulo = (TextView)findViewById(R.id.textView27);
-        //titulo.setTypeface(typefacebold);
 
         Init5();
         api=new ApiClient(VehicleOdometer.this);
@@ -299,9 +281,6 @@ public class VehicleOdometer extends BaseActivity {
         TextView back=(TextView) sortView.findViewById(R.id.btnRegresar);
         TextView pagar=(TextView) sortView.findViewById(R.id.btnPagar);
         TextView dias=(TextView) sortView.findViewById(R.id.lbGral);
-        back.setTypeface(typeface);
-        pagar.setTypeface(typeface);
-        dias.setTypeface(typeface);
         dias.setText(Html.fromHtml("<p>Han transcurrido <b>"+noDias+" días" +
                 "</b> desde tu<br> último reporte de odómetro,<br>tu <b>cargo es de $"+saldo+"</b></p>"));
         back.setOnClickListener(new View.OnClickListener() {

@@ -53,11 +53,10 @@ public class VehicleModelAdapter extends BaseAdapter {
 
     public String pathPhotos;
 
-    public VehicleModelAdapter(Context mContext, List<InfoClient> mInfoClientList, Typeface t, long tie, PrincipalActivity callBack) {
+    public VehicleModelAdapter(Context mContext, List<InfoClient> mInfoClientList, long tie, PrincipalActivity callBack) {
         this.mContext = mContext;
         this.mInfoClientList = mInfoClientList;
         this.callBack=callBack;
-        tipo = t;
         this.time = tie;
         pathPhotos = new ApiClient(this.mContext).pathPhotos;
     }
@@ -90,9 +89,9 @@ public class VehicleModelAdapter extends BaseAdapter {
         LinearLayout btnRenovacion=(LinearLayout) v.findViewById(R.id.btnRenovacion);
         ImageView btnSiniestro=(ImageView)v.findViewById(R.id.btnSiniestro);
         ImageView imagen = (ImageView)v.findViewById(R.id.profile_image);
-        TxtNoPolicy.setTypeface(tipo,Typeface.BOLD);
-        TxtInfo.setTypeface(tipo,Typeface.BOLD);
-        TxtMensajeLimite.setTypeface(tipo);
+        //TxtNoPolicy.setTypeface(tipo,Typeface.BOLD);
+        //TxtInfo.setTypeface(tipo,Typeface.BOLD);
+        //TxtMensajeLimite.setTypeface(tipo);
 
         if(imagen != null){
             //pintaImg(imagen,position);
@@ -114,9 +113,9 @@ public class VehicleModelAdapter extends BaseAdapter {
         if(mInfoClientList.get(position).getPolicies().getMensualidad()==11){
             btnRenovacion.setVisibility(View.VISIBLE);
             lbRenovacion1.setTextColor(Color.RED);
-            lbRenovacion1.setTypeface(tipo,Typeface.BOLD);
+            //lbRenovacion1.setTypeface(tipo,Typeface.BOLD);
             lbRenovacion2.setTextColor(Color.RED);
-            lbRenovacion2.setTypeface(tipo);
+            //lbRenovacion2.setTypeface(tipo);
             btnRenovacion.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -151,7 +150,7 @@ public class VehicleModelAdapter extends BaseAdapter {
             TxtInfo.setText("Próximo reporte:\ndel "+desde.replace(".","")+" al "+limite.replace(".","")+" a las 23:59 hrs");
             TxtMensajeLimite.setText("Ver información");
             TxtMensajeLimite.setVisibility(View.VISIBLE);
-            TxtMensajeLimite.setTextColor(mContext.getResources().getColor(R.color.colorPrimaryDark));
+            TxtMensajeLimite.setTextColor(mContext.getResources().getColor(R.color.naranjaatlas));
 
             if(mInfoClientList.get(position).getPolicies().getState().getId()==15){
                 img.setImageResource(R.drawable.reedmiituo);

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "277935563754",
+    "firebase_url": "https://miituo-atlas-2020.firebaseio.com",
+    "project_id": "miituo-atlas-2020",
+    "storage_bucket": "miituo-atlas-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277935563754:android:3e2a1bd66622cf1fecc893",
+        "android_client_info": {
+          "package_name": "com.miituo.atlaskm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277935563754-ptkchrpf03cmluu7v9mv96tq0mvjhsd5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqwOPgaLSfTWyhZ3E9ql9NjbLpkUA2QAs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277935563754-ptkchrpf03cmluu7v9mv96tq0mvjhsd5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "277935563754-ersaeesfku2qqn1qs39h948pgg3g71b7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.miituo.atlasKm"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

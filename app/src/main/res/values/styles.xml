@@ -9,6 +9,45 @@
         <item name="android:textColorSecondary">@android:color/black</item>
     </style>
 
+    <style name="textThemePrimary" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="textThemeSecondary" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/lato_light</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="textThemFotos" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/lato_light</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="textThemeEdit" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="textThemeEditSecondary" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">@color/naranjaatlas</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="buttonThemePrimary" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
