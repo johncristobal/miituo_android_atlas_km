@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/transparent"
+            android:theme="@style/textThemeEdit"
             android:ems="10"
             android:gravity="center"
             android:hint="ingresa tu celular"
@@ -36,15 +37,16 @@
         android:layout_marginRight="50dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/backspinner">
+
         <EditText
             android:id="@+id/recelEditAlert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/transparent"
             android:ems="10"
             android:gravity="center"
             android:hint="confirma tu celular"
-            android:inputType="numberSigned" />
+            android:inputType="numberSigned"
+            android:theme="@style/textThemeEdit" />
     </RelativeLayout>
 
     <LinearLayout

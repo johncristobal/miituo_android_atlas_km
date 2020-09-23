@@ -117,7 +117,7 @@
             android:gravity="center"
             android:theme="@style/textThemePrimary"
             android:text="Asegúrese de que la iluminación sea la adecuada para que la fotografía sea clara y los números visibles."
-            android:textSize="16sp" />
+            />
 
     </RelativeLayout>
 

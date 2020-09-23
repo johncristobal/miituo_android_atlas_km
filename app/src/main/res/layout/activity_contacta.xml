@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="viewText"
-                android:textSize="15sp"
+                android:theme="@style/textThemePrimary"
                 android:textColor="@color/colorAccent"
                 android:layout_marginLeft="5dp"/>
 
@@ -72,8 +72,7 @@
                 android:paddingRight="30dp"
                 android:paddingTop="5dp"
                 android:text="Llamar"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
+                android:theme="@style/buttonThemePrimary"
                 />
 
         </LinearLayout>
@@ -91,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:text="o escríbanos a info@segurosatlas.com.mx"
                 android:layout_marginTop="10dp"
-                android:textSize="16sp"
+                android:theme="@style/textThemePrimary"
                 android:onClick="callDos" />
 
             <TextView
@@ -106,8 +105,7 @@
                 android:paddingRight="30dp"
                 android:paddingTop="5dp"
                 android:text="Enviar correo"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp" />
+                android:theme="@style/buttonThemePrimary" />
         </LinearLayout>
 
     </LinearLayout>

@@ -32,6 +32,7 @@
                 android:paddingStart="15dp"
                 android:paddingLeft="15dp"
                 android:text="Tu recibo del mes"
+                android:textStyle="bold"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -62,8 +63,7 @@
                 android:layout_weight="1"
                 android:paddingLeft="25dp"
                 android:text="kms recorridos en el mes"
-                android:textColor="#878787"
-                android:textSize="13sp" />
+                android:theme="@style/textThemePrimary" />
 
             <TextView
                 android:id="@+id/lbDiferencia"
@@ -74,8 +74,7 @@
                 android:paddingRight="17dp"
                 android:textStyle="bold"
                 android:text="TextView"
-                android:textColor="#878787"
-                android:textSize="15sp" />
+                android:theme="@style/textThemePrimary" />
 
         </LinearLayout>
         <!--condonacion-->
@@ -223,8 +222,7 @@
                 android:layout_weight="1"
                 android:paddingLeft="25dp"
                 android:text="Total kms a pagar"
-                android:textColor="#2f3030"
-                android:textSize="13sp" />
+                android:theme="@style/textThemePrimary" />
 
             <TextView
                 android:id="@+id/textView24"
@@ -234,8 +232,7 @@
                 android:gravity="right"
                 android:paddingRight="17dp"
                 android:text="TextView"
-                android:textColor="#2f3030"
-                android:textSize="15sp"
+                android:theme="@style/textThemePrimary"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -257,8 +254,7 @@
                 android:layout_weight="1"
                 android:paddingLeft="25dp"
                 android:text="x Prima por kilómetro"
-                android:textColor="#2f3030"
-                android:textSize="13sp" />
+                android:theme="@style/textThemePrimary" />
 
             <TextView
                 android:id="@+id/textView21"
@@ -268,9 +264,9 @@
                 android:gravity="right"
                 android:paddingRight="17dp"
                 android:text="TextView"
-                android:textColor="#2f3030"
+                android:theme="@style/textThemePrimary"
                 android:textStyle="bold"
-                android:textSize="15sp" />
+                 />
         </LinearLayout>
 
         <LinearLayout
@@ -286,8 +282,7 @@
                 android:layout_weight="1"
                 android:paddingLeft="25dp"
                 android:text="+ Base mensual"
-                android:textColor="#2f3030"
-                android:textSize="13sp" />
+                android:theme="@style/textThemePrimary"/>
 
             <TextView
                 android:id="@+id/textView19"
@@ -298,8 +293,7 @@
                 android:gravity="right"
                 android:paddingRight="17dp"
                 android:text="TextView"
-                android:textColor="#2f3030"
-                android:textSize="15sp"
+                android:theme="@style/textThemePrimary"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -332,9 +326,9 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:textStyle="bold"
-                android:textColor="#2f3030"
+                android:theme="@style/textThemePrimary"
                 android:text="Total a pagar"
-                android:textSize="15sp" />
+                 />
 
             <TextView
                 android:id="@+id/textView50"
@@ -344,8 +338,7 @@
                 android:gravity="right"
                 android:paddingRight="17dp"
                 android:text="TextView"
-                android:textColor="#2f3030"
-                android:textSize="17sp"
+                android:theme="@style/textThemePrimary"
                 android:textStyle="bold" />
         </LinearLayout>
 

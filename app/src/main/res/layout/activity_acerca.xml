@@ -39,7 +39,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:text="versión 1.1"
-            android:textColor="@android:color/black"
+            android:theme="@style/textThemePrimary"
             android:textStyle="bold" />
 
         <ListView

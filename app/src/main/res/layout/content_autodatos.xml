@@ -7,10 +7,11 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#fff"
-        android:id="@+id/appBarLayout">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView3"
@@ -27,12 +28,12 @@
             android:layout_width="30dp"
             android:layout_height="20dp"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="25dp"
-            app:srcCompat="@mipmap/sobre2x"
-            android:layout_alignParentRight="true"
             android:layout_marginRight="25dp"
-            android:visibility="invisible"/>
+            android:visibility="invisible"
+            app:srcCompat="@mipmap/sobre2x" />
     </RelativeLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -58,6 +59,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             android:text="Datos auto"
+            android:theme="@style/textThemePrimary"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -68,6 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="Marca:"
+            android:theme="@style/textThemePrimary"
             app:layout_constraintStart_toStartOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -78,6 +81,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginStart="5dp"
             android:text="TextView"
+            android:theme="@style/textThemePrimary"
             app:layout_constraintBottom_toBottomOf="@+id/textView6"
             app:layout_constraintStart_toEndOf="@+id/textView6" />
 
@@ -87,6 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Modelo:"
+            android:theme="@style/textThemePrimary"
             app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -97,6 +102,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginStart="5dp"
             android:text="TextView"
+            android:theme="@style/textThemePrimary"
             app:layout_constraintBottom_toBottomOf="@+id/textView15"
             app:layout_constraintStart_toEndOf="@+id/textView15" />
 
@@ -106,6 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Año: "
+            android:theme="@style/textThemePrimary"
             app:layout_constraintStart_toStartOf="@+id/textView15"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -116,6 +123,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginStart="5dp"
             android:text="TextView"
+            android:theme="@style/textThemePrimary"
             app:layout_constraintBottom_toBottomOf="@+id/textView17"
             app:layout_constraintStart_toEndOf="@+id/textView17" />
 
@@ -126,6 +134,7 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="5dp"
             android:text="Descripción: "
+            android:theme="@style/textThemePrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView17"
             app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -137,6 +146,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginStart="5dp"
             android:text="TextView"
+            android:theme="@style/textThemePrimary"
             app:layout_constraintBottom_toBottomOf="@+id/textView19"
             app:layout_constraintStart_toEndOf="@+id/textView19" />
     </androidx.constraintlayout.widget.ConstraintLayout>

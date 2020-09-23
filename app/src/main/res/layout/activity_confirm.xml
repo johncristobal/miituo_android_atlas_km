@@ -118,7 +118,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="10dp"
                 android:text="Introduzca su odómetro mensual"
-                android:textSize="16sp" />
+                android:theme="@style/textThemePrimary"/>
 
             <EditText
                 android:id="@+id/editTextConfirma"
@@ -132,7 +132,8 @@
                 android:background="@drawable/border"
                 android:layout_below="@+id/textView58"
                 android:layout_alignLeft="@+id/textView58"
-                android:layout_alignStart="@+id/textView58" />
+                android:layout_alignStart="@+id/textView58"
+                android:theme="@style/textThemeEdit"/>
         </RelativeLayout>
 
         <Button
@@ -146,7 +147,7 @@
             android:elevation="17dp"
             android:onClick="validar"
             android:text="Aceptar"
-            android:textColor="@android:color/white" />
+            android:theme="@style/buttonThemePrimary" />
 
         <ImageView
             android:id="@+id/imageView17"

@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border"
-        android:layout_marginTop="-5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
         android:paddingBottom="10dp"
@@ -72,6 +72,7 @@
                 android:layout_weight="0.5"
                 android:gravity="bottom|center_horizontal"
                 android:layout_height="wrap_content"
+                android:theme="@style/textThemePrimary"
                 android:text="0 a 10"/>
             <TextView
                 android:id="@+id/lbB2"
@@ -79,6 +80,7 @@
                 android:layout_weight="0.5"
                 android:gravity="bottom|center_horizontal"
                 android:layout_height="wrap_content"
+                android:theme="@style/textThemePrimary"
                 android:text="350"/>
         </LinearLayout>
         <View
@@ -103,14 +105,16 @@
                 android:layout_weight="0.5"
                 android:gravity="bottom|center_horizontal"
                 android:layout_height="wrap_content"
-                android:text="11 a 20"/>
+                android:text="11 a 20"
+                android:theme="@style/textThemePrimary"/>
             <TextView
                 android:id="@+id/lbC2"
                 android:layout_width="0dp"
                 android:layout_weight="0.5"
                 android:gravity="bottom|center_horizontal"
                 android:layout_height="wrap_content"
-                android:text="700"/>
+                android:text="700"
+                android:theme="@style/textThemePrimary"/>
         </LinearLayout>
         <View
             android:layout_width="match_parent"
@@ -134,14 +138,16 @@
                 android:layout_weight="0.5"
                 android:gravity="bottom|center_horizontal"
                 android:layout_height="wrap_content"
-                android:text="21 a 30"/>
+                android:text="21 a 30"
+                android:theme="@style/textThemePrimary"/>
             <TextView
                 android:id="@+id/lbD2"
                 android:layout_width="0dp"
                 android:layout_weight="0.5"
                 android:gravity="bottom|center_horizontal"
                 android:layout_height="wrap_content"
-                android:text="1000"/>
+                android:text="1000"
+                android:theme="@style/textThemePrimary"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -161,8 +167,8 @@
         android:onClick="pagar"
         android:text="Pagar"
         android:textSize="17sp"
-        android:background="@drawable/button"
         android:textColor="#FFFFFF"
+        android:background="@drawable/button"
         tools:ignore="OnClick" />
     <TextView
         android:id="@+id/btnRegresar"

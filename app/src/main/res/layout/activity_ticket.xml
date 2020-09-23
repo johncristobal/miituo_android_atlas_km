@@ -74,8 +74,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="25dp"
                         android:text="kms recorridos en el mes"
-                        android:textColor="#878787"
-                        android:textSize="15sp" />
+                        android:theme="@style/textThemePrimary" />
 
                     <TextView
                         android:id="@+id/lbDiferencia"
@@ -86,8 +85,7 @@
                         android:paddingRight="17dp"
                         android:textStyle="bold"
                         android:text="TextView"
-                        android:textColor="#878787"
-                        android:textSize="17sp" />
+                        android:theme="@style/textThemePrimary" />
 
                 </LinearLayout>
                 <!--condonacion-->
@@ -235,8 +233,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="25dp"
                         android:text="Total kms a pagar"
-                        android:textColor="#2f3030"
-                        android:textSize="15sp" />
+                        android:theme="@style/textThemePrimary" />
 
                     <TextView
                         android:id="@+id/textView24"
@@ -246,8 +243,7 @@
                         android:gravity="right"
                         android:paddingRight="17dp"
                         android:text="TextView"
-                        android:textColor="#2f3030"
-                        android:textSize="17sp"
+                        android:theme="@style/textThemePrimary"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -265,8 +261,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="25dp"
                         android:text="x Prima por kilómetro"
-                        android:textColor="#2f3030"
-                        android:textSize="15sp" />
+                        android:theme="@style/textThemePrimary" />
 
                     <TextView
                         android:id="@+id/textView21"
@@ -277,8 +272,7 @@
                         android:paddingRight="17dp"
                         android:text="TextView"
                         android:textColor="#2f3030"
-                        android:textStyle="bold"
-                        android:textSize="17sp" />
+                        android:theme="@style/textThemePrimary" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -341,9 +335,9 @@
                         android:layout_weight="1"
                         android:gravity="right"
                         android:textStyle="bold"
-                        android:textColor="#2f3030"
+
                         android:text="Total a pagar"
-                        android:textSize="18sp" />
+                        android:theme="@style/textThemePrimary"/>
 
                     <TextView
                         android:id="@+id/textView50"
@@ -353,8 +347,7 @@
                         android:gravity="right"
                         android:paddingRight="17dp"
                         android:text="TextView"
-                        android:textColor="#2f3030"
-                        android:textSize="20sp"
+                        android:theme="@style/textThemePrimary"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -395,8 +388,7 @@
                     android:paddingStart="25dp"
                     android:paddingLeft="25dp"
                     android:text="Tus odómetros registrados"
-                    android:textColor="#878787"
-                    android:textSize="18sp" />
+                    android:theme="@style/textThemePrimary" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -412,8 +404,7 @@
                         android:paddingStart="40dp"
                         android:paddingLeft="40dp"
                         android:text="Actual"
-                        android:textColor="#878787"
-                        android:textSize="15sp" />
+                        android:theme="@style/textThemePrimary" />
 
                     <TextView
                         android:id="@+id/textView11"
@@ -423,8 +414,7 @@
                         android:gravity="center"
                         android:paddingEnd="20dp"
                         android:paddingRight="20dp"
-                        android:text="TextView"
-                        android:textSize="17sp" />
+                        android:theme="@style/textThemePrimary" />
 
                 </LinearLayout>
 
@@ -442,8 +432,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="40dp"
                         android:text="Anterior"
-                        android:textColor="#878787"
-                        android:textSize="15sp" />
+                        android:theme="@style/textThemePrimary" />
 
                     <TextView
                         android:id="@+id/textView14"
@@ -453,7 +442,7 @@
                         android:gravity="center"
                         android:paddingRight="20dp"
                         android:text="TextView"
-                        android:textSize="17sp" />
+                        android:theme="@style/textThemePrimary" />
                 </LinearLayout>
 
 
