@@ -34,15 +34,13 @@ public class PushAdapter extends BaseAdapter {
 
     private Context mContext;
     private List<Notifications> pushes;
-    public Typeface tipo;
     private SimpleCallBack callBack;
     public String noTel="";
 
-    public PushAdapter(Context mContext, List<Notifications> pushes, Typeface t, SimpleCallBack callBack) {
+    public PushAdapter(Context mContext, List<Notifications> pushes, SimpleCallBack callBack) {
         this.mContext = mContext;
         this.pushes = pushes;
         this.callBack=callBack;
-        tipo = t;
     }
 
     @Override
@@ -70,9 +68,6 @@ public class PushAdapter extends BaseAdapter {
         TextView lbDate=(TextView)v.findViewById(R.id.lbDate);
         RelativeLayout btnInfo=(RelativeLayout) v.findViewById(R.id.btnGral);
         ImageView imagen = (ImageView)v.findViewById(R.id.iconPush);
-        title.setTypeface(tipo,Typeface.BOLD);
-        body.setTypeface(tipo);
-        lbDate.setTypeface(tipo);
         lbOpts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

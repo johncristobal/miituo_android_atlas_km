@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -30,7 +31,6 @@ import static com.miituo.atlaskm.activities.MainActivity.result;
 
 public class CambioPagoActivity extends BaseActivity implements CallBack {
 
-    public Typeface typeface;
     private ListView listPolizas;
     private TextView lbOK,lbQuestion,lbSelect;
     private VehicleModelAdapterSelector vadapter;
@@ -49,15 +49,19 @@ public class CambioPagoActivity extends BaseActivity implements CallBack {
         setSupportActionBar(toolbar);
          */
         //get back arrow
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
+
+        ImageButton back = (ImageButton)findViewById(R.id.BackButton);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         lbQuestion=(TextView)findViewById(R.id.lbQuestion);
-        lbQuestion.setTypeface(typeface,Typeface.BOLD);
         lbSelect=(TextView)findViewById(R.id.lbSelecciona);
-        lbSelect.setTypeface(typeface);
         lbOK=(TextView)findViewById(R.id.lbOK);
-        lbOK.setTypeface(typeface);
         lbOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +90,7 @@ public class CambioPagoActivity extends BaseActivity implements CallBack {
         removeInvalidPolicies();
         app_preferences= getSharedPreferences("miituo", Context.MODE_PRIVATE);
         starttime = app_preferences.getLong("time",0);
-        vadapter = new VehicleModelAdapterSelector(this, result,typeface,starttime, this);
+        vadapter = new VehicleModelAdapterSelector(this, result,starttime, this);
         vadapter.notifyDataSetChanged();
         listPolizas.setAdapter(vadapter);
     }

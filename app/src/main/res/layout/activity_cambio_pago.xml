@@ -7,20 +7,51 @@
     android:background="#FFFFFF"
     tools:context=".activities.CambioPagoActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/toprelative"
+        android:layout_height="60dp">
+
+        <ImageButton
+            android:id="@+id/BackButton"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/closeimage" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Forma de pago"
+            android:textColor="@color/colorAccent"
+            android:theme="@style/textThemePrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/lbQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_below="@+id/title"
+        android:textSize="18sp"
+        android:layout_below="@+id/toprelative"
         android:theme="@style/textThemePrimary"
         android:layout_marginLeft="17dp"
         android:layout_marginRight="17dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:textStyle="bold"
         android:gravity="center"
         android:layout_gravity="center_horizontal"
         android:text="¿Quieres cambiar tu método de pago?"/>
+
     <TextView
         android:id="@+id/lbSelecciona"
         android:layout_width="match_parent"

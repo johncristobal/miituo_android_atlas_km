@@ -70,8 +70,6 @@ public class LastOdometerActivity extends AppCompatActivity {
     public String respuesta,res;
     final String ApiSendReport="ReportOdometer/";
 
-    public Typeface typeface;
-    public Typeface typefacebold;
     private ImageButton back;
 
     public String datoamount = "";
@@ -82,15 +80,9 @@ public class LastOdometerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_last_odometer);
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
-        typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
-
         TextView leyenda = (TextView)findViewById(R.id.textView8);
         TextView res = (TextView)findViewById(R.id.textView41);
         EditText edit = (EditText)findViewById(R.id.editTextConfirmaOdo);
-        edit.setTypeface(typeface);
-        leyenda.setTypeface(typeface);
-        res.setTypeface(typeface);
 
         odometroAnterior = getIntent().getStringExtra("valor");
         tok = IinfoClient.getInfoClientObject().getClient().getToken();
@@ -105,10 +97,6 @@ public class LastOdometerActivity extends AppCompatActivity {
                 finish();
             }
         });*/
-
-        Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
-        //TextView titulo = (TextView)findViewById(R.id.textView27);
-        //titulo.setTypeface(typefacebold);
 
         //get image and how into imageview here
         SharedPreferences preferences = getSharedPreferences("miituo", Context.MODE_PRIVATE);
@@ -166,7 +154,6 @@ public class LastOdometerActivity extends AppCompatActivity {
             Double dos = Double.parseDouble(odometro);
             String yourFormattedString = formatter.format(dos);
             TextView odom = (TextView)dialog.findViewById(R.id.textView44);
-            odom.setTypeface(typeface);
             odom.setText(yourFormattedString);
 
             TextView title = (TextView)dialog.findViewById(R.id.textView42);
@@ -174,17 +161,9 @@ public class LastOdometerActivity extends AppCompatActivity {
             //TextView title2 = (TextView)dialog.findViewById(R.id.textView45);
             TextView title3 = (TextView)dialog.findViewById(R.id.textView46);
 
-            title.setTypeface(typeface);
-            title1.setTypeface(typeface);
-            //title2.setTypeface(typeface);
-            title3.setTypeface(typeface);
-
             //buttons actiosn
             Button cancel = (Button)dialog.findViewById(R.id.buttonCancel);
             Button aceptar = (Button)dialog.findViewById(R.id.buttonOk);
-
-            aceptar.setTypeface(typeface);
-            cancel.setTypeface(typeface);
 
             //canecler logic
             cancel.setOnClickListener(new View.OnClickListener() {
@@ -816,43 +795,25 @@ public class LastOdometerActivity extends AppCompatActivity {
                         dialog.setContentView(R.layout.custom_alert);
 
                         TextView t47 = (TextView)dialog.findViewById(R.id.textView47);
-                        t47.setTypeface(typeface);
                         t47 = (TextView)dialog.findViewById(R.id.textView55);
-                        t47.setTypeface(typeface);
                         t47 = (TextView)dialog.findViewById(R.id.textView9);
-                        t47.setTypeface(typeface);
                         t47 = (TextView)dialog.findViewById(R.id.textView12);
-                        t47.setTypeface(typeface);
                         t47 = (TextView)dialog.findViewById(R.id.textView15);
-                        t47.setTypeface(typeface);
                         if(!KmsDescuento.equalsIgnoreCase("")){t47.setText("Kms recorridos \ndesde el último reporte");}
                         t47 = (TextView)dialog.findViewById(R.id.textView20);
-                        t47.setTypeface(typeface);
                         t47 = (TextView)dialog.findViewById(R.id.textView22);
-                        t47.setTypeface(typeface);
                         t47 = (TextView)dialog.findViewById(R.id.textView18);
-                        t47.setTypeface(typeface);
                         t47 = (TextView)dialog.findViewById(R.id.textView26);
-                        t47.setTypeface(typeface);
                         t47 = (TextView)dialog.findViewById(R.id.textoiva);
-                        t47.setTypeface(typeface);
                         t47 = (TextView)dialog.findViewById(R.id.lbCondonados);
-                        t47.setTypeface(typeface);
                         TextView lbCondonados2 = (TextView)dialog.findViewById(R.id.lbCondonados2);
-                        lbCondonados2.setTypeface(typeface);
                         t47 = (TextView)dialog.findViewById(R.id.lbVacaciones);
-                        t47.setTypeface(typeface);
                         TextView lbVacaciones2 = (TextView)dialog.findViewById(R.id.lbVacaciones2);
-                        lbVacaciones2.setTypeface(typeface);
                         t47 = (TextView)dialog.findViewById(R.id.lbReferidos);
-                        t47.setTypeface(typeface);
                         TextView lbReferidos2 = (TextView)dialog.findViewById(R.id.lbReferidos2);
-                        lbReferidos2.setTypeface(typeface);
                         TextView lbVacaciones=(TextView)dialog.findViewById(R.id.lbVacacionesHelp);
-                        lbVacaciones.setTypeface(typeface);
                         lbVacaciones.setText("Este mes recorriste más de 1000 km,\npero no te preocupes solo te cobraremos 1000 km");
                         TextView lbTerminos = (TextView)dialog.findViewById(R.id.textoTerminos);
-                        lbTerminos.setTypeface(typeface);
                         lbTerminos.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -937,7 +898,6 @@ public class LastOdometerActivity extends AppCompatActivity {
                         }
 
                         Button cancel = (Button)dialog.findViewById(R.id.button3);
-                        cancel.setTypeface(typeface);
                         cancel.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -948,7 +908,6 @@ public class LastOdometerActivity extends AppCompatActivity {
                             }
                         });
                         Button aceptar = (Button)dialog.findViewById(R.id.button2);
-                        aceptar.setTypeface(typeface);
                         aceptar.setOnClickListener(new View.OnClickListener() {
                             //call the other method to confirm odometer...
 
@@ -968,21 +927,17 @@ public class LastOdometerActivity extends AppCompatActivity {
 
                         //odometros-----------------------------------------------------------------
                         TextView hoy = (TextView)dialog.findViewById(R.id.textView11);
-                        hoy.setTypeface(typeface);
 
                         Double dos = Double.parseDouble(actual);
                         String yourFormattedString = formatterTwo.format(dos);
                         hoy.setText(yourFormattedString);
 
                         TextView antes = (TextView)dialog.findViewById(R.id.textView14);
-                        antes.setTypeface(typeface);
                         Double antesdos = Double.parseDouble(anterior);
                         String yourFormattedStringTwo = formatterTwo.format(antesdos);
                         antes.setText(yourFormattedStringTwo);
 
                         TextView difer = (TextView)dialog.findViewById(R.id.lbDiferencia);
-                        difer.setTypeface(typeface);
-//                        Double antestres = Double.parseDouble(diferencia);
                         Double antestres = Double.parseDouble(recorridos);
                         String formatedThree = formatterTwo.format(antestres);
                         difer.setText(formatedThree);
@@ -990,7 +945,6 @@ public class LastOdometerActivity extends AppCompatActivity {
                         //Tarifas-------------------------------------------------------------------
                         double s1 = Double.parseDouble(feepormktarifa);
                         TextView tarifa = (TextView)dialog.findViewById(R.id.textView21);
-                        tarifa.setTypeface(typeface);
                         DecimalFormat formattertarifa = new DecimalFormat("$ 0.0000");
                         tarifa.setText(formattertarifa.format(s1));
 
@@ -998,7 +952,6 @@ public class LastOdometerActivity extends AppCompatActivity {
                         s1 = Double.parseDouble(fee);
                         Double s2 = Double.parseDouble(ivafee);
                         TextView basepormes = (TextView)dialog.findViewById(R.id.textView19);
-                        basepormes.setTypeface(typefacebold);
                         //basepormes.setText(formatter.format(Math.round(s1+s2)));
                         basepormes.setText(formatter.format((s1+s2)));
 
@@ -1012,7 +965,6 @@ public class LastOdometerActivity extends AppCompatActivity {
                         s1 = Double.parseDouble(cobroportarifa);
                         Double s3 = Double.parseDouble(ivatarifa);
                         TextView tarifafinal = (TextView)dialog.findViewById(R.id.textView24);
-                        tarifafinal.setTypeface(typefacebold);
                         tarifafinal.setText(diferencia);//formatter.format(s1+s3));
 
                         //str = dato.toString().replaceAll("[^\\d]", "");
@@ -1020,7 +972,6 @@ public class LastOdometerActivity extends AppCompatActivity {
                         //TextView ending = (TextView)dialog.findViewById(R.id.textView27);
                         TextView ending2 = (TextView)dialog.findViewById(R.id.textView50);
                         //ending.setTypeface(typeface);
-                        ending2.setTypeface(typefacebold);
                         //ending.setText(formatter.format(s1));
                         if(datoamount.equalsIgnoreCase("0.0")){
                             ending2.setText("$ 0.00"

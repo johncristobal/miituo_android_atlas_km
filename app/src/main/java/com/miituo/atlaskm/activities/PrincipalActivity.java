@@ -516,7 +516,8 @@ public class PrincipalActivity extends AppCompatActivity
                     }
                 } else if (position == 3) {
                     drawer.closeDrawer(GravityCompat.START);
-                    Intent i = new Intent(PrincipalActivity.this, AcercaActivity.class);
+                    Intent i = new Intent(PrincipalActivity.this, ContactaActivity.class);
+                    //Intent i = new Intent(PrincipalActivity.this, AcercaActivity.class);
                     startActivity(i);
                 } else if (position == 4) {
                     drawer.closeDrawer(GravityCompat.START);
@@ -633,17 +634,19 @@ public class PrincipalActivity extends AppCompatActivity
         ClientMovil cli = new ClientMovil();
         cli.setDatacelphone(celData);
         cli.setCelphone(app_preferences.getString("Celphone", "0"));
-        //String token = FirebaseInstanceId.getInstance().getToken();
-        //cli.setToken(token);
-
-        //send token firebase to server...
-        new PutTokenSync("ClientUser", PrincipalActivity.this, cli, tokencliente, (status, res) -> {
-            if(status){
-                Log.e("OK","Token enviado correctamente");
-            }else{
-                Log.e("Error","Error al enviar token");
-            }
-        }).execute();
+        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this, instanceIdResult -> {
+            String newToken = instanceIdResult.getToken();
+            Log.e("newToken", newToken);
+            String token = FirebaseInstanceId.getInstance().getToken();
+            cli.setToken(token);
+            new PutTokenSync("ClientUser", PrincipalActivity.this, cli, tokencliente, (status, res) -> {
+                if(status){
+                    Log.e("OK","Token enviado correctamente");
+                }else{
+                    Log.e("Error","Error al enviar token");
+                }
+            }).execute();
+        });
     }
 
     //TODO - borra polizas inactivas  ------------------------------------------------------------------

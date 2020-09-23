@@ -44,7 +44,6 @@ import static com.miituo.atlaskm.activities.MainActivity.result;
 
 public class NotificationsActivity extends BaseActivity implements SimpleCallBack ,SwipeActionAdapter.SwipeActionListener{
 
-    private Typeface typeface;
     private TextView lb1,lbAceptar;
     private LinearLayout cntNoNotificaciones;
     private ImageButton back;
@@ -66,11 +65,8 @@ public class NotificationsActivity extends BaseActivity implements SimpleCallBac
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         */
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         lb1=(TextView)findViewById(R.id.lb1);
-        lb1.setTypeface(typeface,Typeface.BOLD);
         lbAceptar=(TextView)findViewById(R.id.lbAceptar);
-        lbAceptar.setTypeface(typeface);
         cntNoNotificaciones=(LinearLayout)findViewById(R.id.cntNoPush);
         listPush=(ListView)findViewById(R.id.listPushes);
         back = (ImageButton)findViewById(R.id.BackButton);
@@ -115,7 +111,7 @@ public class NotificationsActivity extends BaseActivity implements SimpleCallBac
     private void showPushes(){
         try {
             Collections.sort(ps);
-            vadapter = new PushAdapter(getApplicationContext(), ps,typeface,this);
+            vadapter = new PushAdapter(getApplicationContext(), ps,this);
 //            mAdapter=new SwipeActionAdapter(vadapter);
 //            mAdapter.setSwipeActionListener(this)
 //                    .setDimBackgrounds(false)

@@ -286,7 +286,7 @@
                         android:layout_width="38dp"
                         android:layout_height="38dp"
                         android:layout_marginEnd="5dp"
-                        app:srcCompat="@drawable/cambiar_pago"/>
+                        app:srcCompat="@drawable/poliza"/>
                     <TextView
                         android:id="@+id/lbCambioPago"
                         android:layout_width="match_parent"
@@ -309,7 +309,7 @@
                         android:layout_width="38dp"
                         android:layout_height="38dp"
                         android:layout_marginEnd="5dp"
-                        app:srcCompat="@drawable/edo_cta"/>
+                        app:srcCompat="@drawable/ver"/>
                     <TextView
                         android:id="@+id/lbEdoCta"
                         android:layout_width="match_parent"

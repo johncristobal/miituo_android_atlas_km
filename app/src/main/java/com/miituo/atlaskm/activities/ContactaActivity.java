@@ -28,9 +28,7 @@ public class ContactaActivity extends AppCompatActivity {
 
     private static final int REQUEST = 112;
     public String telefon = "";
-    public Typeface typeface;
-    private TextView lbQuestion,lbFindUs,lbT1,lbT2,lbE,lbAddress;
-    private ImageView face,twit,link,inst;
+    private TextView lbT1, lbE;
     private ImageButton back;
 
     @Override
@@ -47,7 +45,6 @@ public class ContactaActivity extends AppCompatActivity {
         //get back arrow
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //getSupportActionBar().setDisplayShowHomeEnabled(true);
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
         //lbQuestion=findViewById(R.id.lbQuestion);
         //lbQuestion.setTypeface(typeface,Typeface.BOLD);
         //lbFindUs=findViewById(R.id.lbFindUs);
@@ -55,12 +52,10 @@ public class ContactaActivity extends AppCompatActivity {
         //lbAddress=findViewById(R.id.lbAddress);
         //lbAddress.setTypeface(typeface);
         lbT1=findViewById(R.id.lbT1);
-        lbT1.setTypeface(typeface);
         lbT1.setText(Html.fromHtml(getResources().getString(R.string.informacion)));
         //lbT2=findViewById(R.id.lbT2);
         //lbT2.setTypeface(typeface,Typeface.BOLD);
         lbE=findViewById(R.id.lbE);
-        lbE.setTypeface(typeface,Typeface.BOLD);
 
         //face=findViewById(R.id.imgFace);
         //twit=findViewById(R.id.imgTwit);

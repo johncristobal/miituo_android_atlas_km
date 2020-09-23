@@ -31,18 +31,16 @@ public class VehicleModelAdapterSelector extends BaseAdapter {
 
     private Context mContext;
     private List<InfoClient> mInfoClientList;
-    public Typeface tipo;
     public long time;
     private CallBack callBack;
     public String noTel = "";
 
     public String pathPhotos;
 
-    public VehicleModelAdapterSelector(Context mContext, List<InfoClient> mInfoClientList, Typeface t, long tie, CallBack callBack) {
+    public VehicleModelAdapterSelector(Context mContext, List<InfoClient> mInfoClientList, long tie, CallBack callBack) {
         this.mContext = mContext;
         this.mInfoClientList = mInfoClientList;
         this.callBack = callBack;
-        tipo = t;
         this.time = tie;
         pathPhotos = new ApiClient(this.mContext).pathPhotos;
     }
@@ -70,8 +68,6 @@ public class VehicleModelAdapterSelector extends BaseAdapter {
         TextView TxtMensajeLimite = (TextView) v.findViewById(R.id.mensajelimite);
         final RelativeLayout btnInfo = (RelativeLayout) v.findViewById(R.id.btnGral);
         ImageView imagen = (ImageView) v.findViewById(R.id.profile_image);
-        TxtNoPolicy.setTypeface(tipo, Typeface.BOLD);
-        TxtMensajeLimite.setTypeface(tipo);
         ImageView img = (ImageView) v.findViewById(R.id.StateImage);
 
         if(imagen != null){

@@ -50,6 +50,7 @@ public class GetPoliciesData extends AsyncTask<String, Void, Void> {
         try {
             status=false;
             ErrorCode = client.getInfoClientData(url, c);
+            //ErrorCode = client.postDatosTemp(url);
             if (ErrorCode.contains("error@")) {
                 status=false;
                 //ErrorCode = "Estamos haciendo algunas actualizaciones, si sigues teniendo problemas para ingresar, contáctate con nosotros.";

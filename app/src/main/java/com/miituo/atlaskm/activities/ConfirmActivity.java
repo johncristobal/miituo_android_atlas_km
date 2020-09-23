@@ -24,7 +24,6 @@ import androidx.appcompat.widget.Toolbar;
 
 public class ConfirmActivity extends AppCompatActivity {
 
-    private Typeface typeface;
     private ImageButton back;
 
     @Override
@@ -48,17 +47,7 @@ public class ConfirmActivity extends AppCompatActivity {
             }
         });*/
 
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
-        TextView leyenda = (TextView)findViewById(R.id.textView8);
-        TextView leyenda2 = (TextView)findViewById(R.id.textView58);
-        TextView res = (TextView)findViewById(R.id.textView41);
-        EditText edit = (EditText)findViewById(R.id.editTextConfirma);
         EditText editlast = (EditText)findViewById(R.id.editTextLast);
-        edit.setTypeface(typeface);
-        editlast.setTypeface(typeface);
-        leyenda.setTypeface(typeface);
-        leyenda2.setTypeface(typeface);
-        res.setTypeface(typeface);
 
         back=(ImageButton)findViewById(R.id.BackButton);
         back.setOnClickListener(new View.OnClickListener() {

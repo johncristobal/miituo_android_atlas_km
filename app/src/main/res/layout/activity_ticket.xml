@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingBottom="10dp">
             <LinearLayout
@@ -31,7 +31,8 @@
                     android:text="Tu recibo del mes"
                     android:layout_marginTop="40dp"
                     android:textSize="18sp"
-                    android:paddingLeft="25dp"
+                    android:theme="@style/textThemePrimary"
+                    android:paddingStart="25dp"
                     android:textColor="#2f3030"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -54,6 +55,7 @@
                     android:layout_marginTop="20dp"
                     android:textColor="#2f3030"
                     android:visibility="gone"
+                    android:theme="@style/textThemePrimary"
                     android:textSize="15sp"
                     android:gravity="center"
                     android:text="Sabemos que es posible que salgas de vacaciones un par de veces al año, por eso ésta vez aplicamos un tope vacacional para que ¡Solo pagues 1200 kms!"/>
@@ -72,7 +74,7 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingLeft="25dp"
+                        android:paddingStart="25dp"
                         android:text="kms recorridos en el mes"
                         android:theme="@style/textThemePrimary" />
 
@@ -81,8 +83,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="right"
-                        android:paddingRight="17dp"
+                        android:gravity="end"
+                        android:paddingEnd="17dp"
                         android:textStyle="bold"
                         android:text="TextView"
                         android:theme="@style/textThemePrimary" />
@@ -104,20 +106,20 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:paddingLeft="25dp"
+                        android:paddingStart="25dp"
                         android:text="No reporte mes anterior (kms)"
                         android:textColor="#2f3030"
                         android:textSize="15sp" />
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:layout_height="wrap_content">
                         <TextView
                             android:id="@+id/lbCondonados2"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:gravity="right"
+                            android:gravity="end"
                             android:text="TextView"
                             android:textColor="#2f3030"
                             android:textSize="17sp"
@@ -126,7 +128,7 @@
                             android:id="@+id/textView65"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingRight="10dp"
+                            android:paddingEnd="10dp"
                             android:text="*"
                             android:textSize="17sp"
                             android:textColor="@color/azul_miituo"
@@ -146,7 +148,7 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingLeft="25dp"
+                        android:paddingStart="25dp"
                         android:text="Tope vacacional (kms)"
                         android:textColor="#2f3030"
                         android:textSize="15sp" />
@@ -154,13 +156,13 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:layout_height="wrap_content">
                         <TextView
                             android:id="@+id/lbVacaciones2"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:gravity="right"
+                            android:gravity="end"
                             android:text="1200"
                             android:textColor="#2f3030"
                             android:textSize="17sp"
@@ -169,7 +171,7 @@
                             android:id="@+id/textView66"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingRight="10dp"
+                            android:paddingEnd="10dp"
                             android:text="*"
                             android:textSize="17sp"
                             android:textColor="@color/azul_miituo"
@@ -189,7 +191,7 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingLeft="25dp"
+                        android:paddingStart="25dp"
                         android:text="Cupón referidos (kms)"
                         android:textColor="#2f3030"
                         android:textSize="15sp" />
@@ -197,13 +199,13 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:layout_height="wrap_content">
                         <TextView
                             android:id="@+id/lbReferidos2"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:gravity="right"
+                            android:gravity="end"
                             android:text="-100"
                             android:textColor="#2f3030"
                             android:textSize="17sp"
@@ -212,7 +214,7 @@
                             android:id="@+id/textView67"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingRight="10dp"
+                            android:paddingEnd="10dp"
                             android:text="*"
                             android:textSize="17sp"
                             android:textColor="@color/azul_miituo"
@@ -231,7 +233,7 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingLeft="25dp"
+                        android:paddingStart="25dp"
                         android:text="Total kms a pagar"
                         android:theme="@style/textThemePrimary" />
 
@@ -240,8 +242,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="right"
-                        android:paddingRight="17dp"
+                        android:gravity="end"
+                        android:paddingEnd="17dp"
                         android:text="TextView"
                         android:theme="@style/textThemePrimary"
                         android:textStyle="bold" />
@@ -259,7 +261,7 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingLeft="25dp"
+                        android:paddingStart="25dp"
                         android:text="x Prima por kilómetro"
                         android:theme="@style/textThemePrimary" />
 
@@ -268,8 +270,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="right"
-                        android:paddingRight="17dp"
+                        android:gravity="end"
+                        android:paddingEnd="17dp"
                         android:text="TextView"
                         android:textColor="#2f3030"
                         android:theme="@style/textThemePrimary" />
@@ -287,7 +289,7 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingLeft="25dp"
+                        android:paddingStart="25dp"
                         android:text="+ Pago único"
                         android:textColor="#2f3030"
                         android:textSize="15sp" />
@@ -298,8 +300,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="right"
-                        android:paddingRight="17dp"
+                        android:gravity="end"
+                        android:paddingEnd="17dp"
                         android:text="TextView"
                         android:textColor="#2f3030"
                         android:textSize="17sp"
@@ -311,7 +313,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="18dp"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:orientation="horizontal">
 
                     <View
@@ -333,7 +335,7 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="right"
+                        android:gravity="end"
                         android:textStyle="bold"
 
                         android:text="Total a pagar"
@@ -344,8 +346,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="right"
-                        android:paddingRight="17dp"
+                        android:gravity="end"
+                        android:paddingEnd="17dp"
                         android:text="TextView"
                         android:theme="@style/textThemePrimary"
                         android:textStyle="bold" />
@@ -386,7 +388,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="25dp"
-                    android:paddingLeft="25dp"
                     android:text="Tus odómetros registrados"
                     android:theme="@style/textThemePrimary" />
 
@@ -402,7 +403,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingStart="40dp"
-                        android:paddingLeft="40dp"
                         android:text="Actual"
                         android:theme="@style/textThemePrimary" />
 
@@ -413,7 +413,6 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:paddingEnd="20dp"
-                        android:paddingRight="20dp"
                         android:theme="@style/textThemePrimary" />
 
                 </LinearLayout>
@@ -430,7 +429,7 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingLeft="40dp"
+                        android:paddingStart="40dp"
                         android:text="Anterior"
                         android:theme="@style/textThemePrimary" />
 
@@ -440,7 +439,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:paddingRight="20dp"
+                        android:paddingEnd="20dp"
                         android:text="TextView"
                         android:theme="@style/textThemePrimary" />
                 </LinearLayout>
@@ -450,37 +449,30 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="60dp"
-                    android:background="#FFFFFF"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="9dp"
                         android:text="Reintentar"
-                        android:paddingBottom="5dp"
-                        android:textColor="@color/azul_miituo"
-                        android:textSize="15sp"
-                        android:onClick=""/>
+                        android:layout_gravity="center"
+                        android:theme="@style/textThemeEditSecondary" />
 
                     <Button
                         android:layout_width="150dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:text="Si, gracias"
                         android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="60dp"
-                        android:textColor="#FFFFFF"
-                        android:textSize="12sp"
-                        android:background="@color/azul_miituo"/>
+                        android:theme="@style/buttonThemePrimary"
+                        android:background="@drawable/button"/>
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
                     android:layout_marginTop="50dp"
                     android:orientation="horizontal">
                     <TextView
@@ -491,9 +483,10 @@
                         android:paddingTop="3dp"
                         android:paddingBottom="3dp"
                         android:gravity="center"
-                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
                         android:text="Nuestros precios incluyen IVA"
-                        android:textSize="9sp" />
+                        android:theme="@style/textThemePrimary"
+                        android:textSize="8sp" />
                     <TextView
                         android:id="@+id/textoTerminos"
                         android:layout_width="0dp"
@@ -503,7 +496,8 @@
                         android:paddingBottom="3dp"
                         android:gravity="center"
                         android:textColor="@color/azul_miituo"
-                        android:paddingRight="10dp"
+                        android:paddingEnd="10dp"
+                        android:theme="@style/textThemePrimary"
                         android:text="Consultar Términos y Condiciones"
                         android:textSize="9sp" />
 

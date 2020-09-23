@@ -17,33 +17,34 @@
                 android:id="@+id/textView27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fotografias"
-                android:textColor="@color/colorAccent"
-                android:textSize="15sp"
-                android:layout_marginStart="75dp"
                 android:layout_marginTop="15dp"
-                app:layout_constraintStart_toEndOf="@+id/textView23"
+                android:text="Odómetro"
+                android:textColor="@color/colorAccent"
+                android:theme="@style/textThemePrimary"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
 
             <ImageButton
                 android:id="@+id/BackButton"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icon_volver" />
+                app:srcCompat="@mipmap/closeimage" />
 
             <TextView
                 android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_marginStart="10dp"
-                android:text="Pólizas"
-                android:textSize="15sp"
+                android:layout_marginTop="6dp"
+                android:text=""
                 android:textColor="@color/azul_miituo"
+                android:textSize="15sp"
                 app:layout_constraintStart_toEndOf="@+id/BackButton"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,7 +58,8 @@
             android:layout_marginTop="150dp"
             android:text="Una vez más"
             android:textSize="24sp"
-            android:layout_marginLeft="50dp" />
+            android:theme="@style/textThemePrimary"
+            android:layout_marginStart="50dp" />
 
         <RelativeLayout
             android:id="@+id/relativeLayout4"
@@ -86,18 +88,16 @@
                 android:hint="Confirma odómetro"
                 android:theme="@style/textThemeEdit"
                 android:inputType="number"
-                android:padding="5dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/border"
                 android:layout_below="@+id/textView41"
-                android:layout_alignLeft="@+id/textView41"
                 android:layout_alignStart="@+id/textView41" />
         </RelativeLayout>
 
         <Button
             android:id="@+id/button5"
             android:layout_width="165dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_centerHorizontal="true"
@@ -105,6 +105,7 @@
             android:layout_below="@+id/relativeLayout4"
             android:background="@drawable/button"
             android:onClick="validar"
+            android:theme="@style/buttonThemePrimary"
             android:text="Confirmar"
             android:textColor="@android:color/white"/>
 

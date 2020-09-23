@@ -4,28 +4,19 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.util.Base64;
 import android.util.Log;
-import android.view.View;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
+import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -37,35 +28,17 @@ import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
-import com.miituo.atlaskm.UploadImageInterface;
-import com.miituo.atlaskm.UploadObject;
 import com.miituo.atlaskm.activities.DetallesActivity;
 import com.miituo.atlaskm.activities.VehicleOdometer;
 import com.miituo.atlaskm.data.ClientMovil;
 import com.miituo.atlaskm.data.FotosFaltantesModel;
 import com.miituo.atlaskm.data.IinfoClient;
 import com.miituo.atlaskm.data.InfoClient;
-import com.miituo.atlaskm.data.imagenClass;
-import com.miituo.atlaskm.db.Logger;
-import com.miituo.atlaskm.multiaseguradora.Aseguradoras;
-import com.miituo.atlaskm.tuto.TutorialActivity;
 import com.miituo.atlaskm.utils.LogHelper;
 import okhttp3.MediaType;
-import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.Response;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * Created by Edrei on 24/01/2017.
@@ -269,6 +242,7 @@ public class ApiClient {
             }
         }
     }
+
     //Enviamos odometro por pirmera vez-----------------------------------------------------------------
     public String postDatos(String Url,String body) throws IOException
     {
@@ -319,6 +293,37 @@ public class ApiClient {
         }
         return  jsonstring;
     }
+
+//    public String postDatosTemp(String Url) throws IOException
+//    {
+//        try {
+//            String json = "{\"solicitante\":{\"apellidoMaterno\":\"Sánchez \",\"apellidoPaterno\":\"Villalobos \",\"calle\":\"ndbxbdbd\",\"ciudad\":\"NAUCALPAN DE JUÁREZ\",\"codigoPostal\":\"53300\",\"colonia\":\"COLÓN ECHEGARAY\",\"estado\":\"MEX\",\"fechaNacimiento\":\"1993-6-19\",\"municipio\":\"NAUCALPAN DE JUÁREZ\",\"numero\":\"\",\"primerNombre\":\"Rodrigo \"}}";
+//            //HttpUrl base_url = RetrofitClient.getInstance().baseUrl();
+//            URL url = new URL("https://edensandbox.circuloapps.com/"+"treeEden/v1/api/verification/preguntas/banxico");
+//            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//            String token = "Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MDA5MjM1OTksInN1YiI6InJvZHJpZ28udmlsbGFsb2Jvcy5zYW5AZ21haWwuY29tIiwiaWF0IjoxNjAwODc3MjgyfQ.zYWvZKnK_7_nVzi9wffZjnwEdq8zMEabcrX2uPE0_PqlrQ8XCsHV0wWelwmA1CCRdBQ89jBK96JveVYrEBImiQ";
+//            connection.setRequestMethod("POST");
+//            connection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+//            connection.setRequestProperty("Authorization", token);
+//            connection.setRequestProperty("Accept", "*/*");
+//            connection.setDoOutput(true);
+//            connection.setDoInput(true);
+//            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream()));
+//            writer.write(json);
+//            writer.close();
+//            connection.connect();
+//            // Response: 400
+//            Log.e("Response", connection.getResponseMessage() + "");
+//            InputStream in=null;
+//            in = connection.getInputStream();
+//            String jsonstring="";
+//            jsonstring=getStringFromInputStream(in);
+//            Log.e("res", jsonstring);
+//        } catch (Exception e) {
+//            Log.e(e.toString(), "Something with request");
+//        }
+//        return null;
+//    }
 
     public String getPDF(Context context,String url,String noPoliza){
         String res=null;
@@ -1369,6 +1374,7 @@ public class ApiClient {
                 }
                 catch (JSONException ex)
                 {
+                    ex.printStackTrace();
                     throw new IOException("Error al Convertir Respuesta de Error");
                 }
             }

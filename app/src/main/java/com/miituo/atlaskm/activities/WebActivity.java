@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -113,7 +114,7 @@ public class WebActivity extends BaseActivity implements SimpleCallBack {
 
         wvPago = (WebView) findViewById(R.id.wvPago);
         cntTarjetas=(LinearLayout)findViewById(R.id.cntTarjetas);
-        //cntAmex=(LinearLayout)findViewById(R.id.cntAmex); cuenta de american express
+        cntAmex=(LinearLayout)findViewById(R.id.cntAmex); //cuenta de american express
         wvPago.setWebViewClient(new WebViewClient());
         wvPago.getSettings().setJavaScriptEnabled(true);
         cntTarjetas.setOnClickListener(new View.OnClickListener() {
@@ -139,6 +140,36 @@ public class WebActivity extends BaseActivity implements SimpleCallBack {
             }
         });
         showUrl();
+
+        ImageButton back = (ImageButton)findViewById(R.id.BackButton);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(WebActivity.this);
+                builder.setTitle("¿Seguro que deseas abandonar el sitio?");
+                builder.setMessage("Es posible que los cambios que implementaste no se puedan guardar.");
+                builder.setCancelable(false);
+                builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+//                    super.onBackPressed();
+                        Alarma a=new Alarma();
+                        a.cancelAlarm(WebActivity.this);
+                        alertToClose.dismiss();
+                        finish();
+                    }
+                });
+                builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        alertToClose.dismiss();
+                    }
+                });
+                alertToClose = builder.create();
+                alertToClose.show();
+            }
+        });
     }
 
     public void showUrl() {

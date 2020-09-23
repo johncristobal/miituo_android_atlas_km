@@ -494,41 +494,38 @@ public class SyncActivity extends AppCompatActivity {
                 //hilos.Sync.execute(telefono.getText().toString());
 
                 String url = "InfoClientMobil/Celphone/"+telefono.getText().toString();
-                new GetPoliciesData(url, SyncActivity.this, new SimpleCallBack() {
-                    @Override
-                    public void run(boolean status, String res) {
-                        if (!status){
-                            String data[] = res.split("@");
-                            launchAlert(data[1]);
-                        }else{
-                            //tenemos polizas, recuperamos list y mandamos a sms...
-                            SharedPreferences.Editor editor = app_preferences.edit();
-                            editor.putString("polizas", res);
-                            editor.putString("Celphone", telefono.getText().toString());
-                            editor.apply();
+                new GetPoliciesData(url, SyncActivity.this, (status, res) -> {
+                    if (!status){
+                        String data[] = res.split("@");
+                        launchAlert(data[1]);
+                    }else{
+                        //tenemos polizas, recuperamos list y mandamos a sms...
+                        SharedPreferences.Editor editor = app_preferences.edit();
+                        editor.putString("polizas", res);
+                        editor.putString("Celphone", telefono.getText().toString());
+                        editor.apply();
 
-                            Gson parseJson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'hh:mm:ss").create();
-                            List<InfoClient> InfoList = parseJson.fromJson(res, new TypeToken<List<InfoClient>>() {
-                            }.getType());
+                        Gson parseJson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'hh:mm:ss").create();
+                        List<InfoClient> InfoList = parseJson.fromJson(res, new TypeToken<List<InfoClient>>() {
+                        }.getType());
 
-                            final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
-                            globalVariable.setPolizas(InfoList);
+                        final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
+                        globalVariable.setPolizas(InfoList);
 
-                            String na = InfoList.get(0).getClient().getName();
-                            tokencliente = InfoList.get(0).getClient().getToken();
-                            app_preferences.edit().putString("nombre", na).apply();
+                        String na = InfoList.get(0).getClient().getName();
+                        tokencliente = InfoList.get(0).getClient().getToken();
+                        app_preferences.edit().putString("nombre", na).apply();
 
-                            //check session flag to launch main or sms
-                            String sesion = app_preferences.getString("sesion","null");
-                            if (sesion.equals("1")) {
-                                LogHelper.log(SyncActivity.this, LogHelper.backTask, "SyncActivity.sendToken", "sesion activa->home",
-                                        "", "", "", "");
-                                Intent ii = new Intent(SyncActivity.this, PrincipalActivity.class);
-                                startActivity(ii);
-                            } else {
-                                int idPolizaTemp = InfoList.get(0).getPolicies().getId();
-                                getTokenSMS(telefono.getText().toString(), idPolizaTemp);
-                            }
+                        //check session flag to launch main or sms
+                        String sesion = app_preferences.getString("sesion","null");
+                        if (sesion.equals("1")) {
+                            LogHelper.log(SyncActivity.this, LogHelper.backTask, "SyncActivity.sendToken", "sesion activa->home",
+                                    "", "", "", "");
+                            Intent ii = new Intent(SyncActivity.this, PrincipalActivity.class);
+                            startActivity(ii);
+                        } else {
+                            int idPolizaTemp = InfoList.get(0).getPolicies().getId();
+                            getTokenSMS(telefono.getText().toString(), idPolizaTemp);
                         }
                     }
                 }).execute();

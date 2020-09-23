@@ -18,7 +18,7 @@
         android:textSize="18sp"
         android:textColor="#000"
         android:gravity="center"
-        android:text="han pasado n dias"
+        android:text="Han pasado n dias"
         />
 
     <LinearLayout
