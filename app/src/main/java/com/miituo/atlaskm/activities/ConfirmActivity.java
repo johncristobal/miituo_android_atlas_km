@@ -22,6 +22,9 @@ import com.miituo.atlaskm.utils.LogHelper;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
+
 public class ConfirmActivity extends AppCompatActivity {
 
     private ImageButton back;
@@ -114,6 +117,7 @@ public class ConfirmActivity extends AppCompatActivity {
             LogHelper.log(ConfirmActivity.this,LogHelper.user_interaction,"ConfirmActivity.validar","continuar odo:"+odo,"",
                     "","id:"+IinfoClient.getInfoClientObject().getPolicies().getId(),"");
             Intent i = new Intent(this,LastOdometerActivity.class);
+            i.setFlags(FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_SINGLE_TOP);
             i.putExtra("valor",odo);
             startActivity(i);
         }

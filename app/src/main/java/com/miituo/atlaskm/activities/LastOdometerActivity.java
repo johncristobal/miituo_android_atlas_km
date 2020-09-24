@@ -154,7 +154,7 @@ public class LastOdometerActivity extends AppCompatActivity {
             Double dos = Double.parseDouble(odometro);
             String yourFormattedString = formatter.format(dos);
             TextView odom = (TextView)dialog.findViewById(R.id.textView44);
-            odom.setText(yourFormattedString);
+            odom.setText(yourFormattedString+" km");
 
             TextView title = (TextView)dialog.findViewById(R.id.textView42);
             TextView title1 = (TextView)dialog.findViewById(R.id.textView43);
@@ -172,6 +172,7 @@ public class LastOdometerActivity extends AppCompatActivity {
 
                     //launch vehicle odometet again...
                     Intent i = new Intent(LastOdometerActivity.this, ConfirmActivity.class);
+
                     //dialog.dismiss();
                     startActivity(i);
                 }
