@@ -80,7 +80,7 @@ public class GetPDFSync extends AsyncTask <String, Void, Void>{
 
     public static Intent openFile(Context context) {
         File f=new File("/sdcard/Download/poliza.pdf");
-        Uri u= FileProvider.getUriForFile(context, "miituo.com.miituo.provider",f);
+        Uri u= FileProvider.getUriForFile(context, "com.miituo.atlaskm.provider",f);
         String type = "application/pdf";
 
 //        Uri path = Uri.fromFile(f);
