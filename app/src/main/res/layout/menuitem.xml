@@ -31,9 +31,9 @@
         android:layout_alignTop="@+id/vi"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
+        android:theme="@style/textThemePrimary"
         android:layout_toEndOf="@+id/imageView11"
-        android:text="TextView"
-        android:textColor="@android:color/black" />
+        android:text="TextView" />
 
     <TextView
         android:visibility="gone"

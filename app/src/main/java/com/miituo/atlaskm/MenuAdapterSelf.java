@@ -21,15 +21,13 @@ import java.io.File;
 public class MenuAdapterSelf extends BaseAdapter {
 
     private Context mContext;
-    public Typeface tipo;
     private int count=0;
     public String[] values = new String[] { "Tus pólizas","Alertas","Método de pago",
             "Acerca de","Contacto","Blog","Preguntas frecuentes","Cancelar póliza","Términos y condiciones"};
 
 
-    public MenuAdapterSelf(Context c, int count, Typeface t){
+    public MenuAdapterSelf(Context c, int count){
         mContext = c;
-        tipo = t;
         this.count=count;
     }
 
@@ -55,7 +53,6 @@ public class MenuAdapterSelf extends BaseAdapter {
         TextView opcion=(TextView)v.findViewById(R.id.textView63);
         ImageView imagen = (ImageView)v.findViewById(R.id.imageView11);
 
-        opcion.setTypeface(tipo);
         //CardView card = (CardView)v.findViewById(R.id.view2);
         //ImageView circulo = (ImageView)v.findViewById(R.id.imageView4);
         //set values
