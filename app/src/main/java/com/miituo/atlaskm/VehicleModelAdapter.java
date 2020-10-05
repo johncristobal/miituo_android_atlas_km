@@ -150,7 +150,7 @@ public class VehicleModelAdapter extends BaseAdapter {
             TxtInfo.setText("Próximo reporte:\ndel "+desde.replace(".","")+" al "+limite.replace(".","")+" a las 23:59 hrs");
             TxtMensajeLimite.setText("Ver información");
             TxtMensajeLimite.setVisibility(View.VISIBLE);
-            TxtMensajeLimite.setTextColor(mContext.getResources().getColor(R.color.naranjaatlas));
+            TxtMensajeLimite.setTextColor(mContext.getResources().getColor(R.color.azul_miituo));
 
             if(mInfoClientList.get(position).getPolicies().getState().getId()==15){
                 img.setImageResource(R.drawable.reedmiituo);

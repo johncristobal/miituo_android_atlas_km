@@ -69,11 +69,11 @@ public class DetallesActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(tab.getPosition());
                 //change icon
                 if(tab.getPosition()==0){
-                    tab.setIcon(R.drawable.poliza);
+                    tab.setIcon(R.drawable.generalg);
                 }else if(tab.getPosition()==1){
-                    tab.setIcon(R.drawable.odom);
+                    tab.setIcon(R.drawable.odo);
                 }else if(tab.getPosition()==2){
-                    tab.setIcon(R.drawable.siniestro);
+                    tab.setIcon(R.drawable.sini);
                 }
             }
 
@@ -81,11 +81,11 @@ public class DetallesActivity extends AppCompatActivity {
             public void onTabUnselected(TabLayout.Tab tab) {
                 //change icon
                 if(tab.getPosition()==0){
-                    tab.setIcon(R.drawable.poliza);
+                    tab.setIcon(R.drawable.generalg);
                 }else if(tab.getPosition()==1){
-                    tab.setIcon(R.drawable.odom);
+                    tab.setIcon(R.drawable.odo);
                 }else if(tab.getPosition()==2){
-                    tab.setIcon(R.drawable.siniestro);
+                    tab.setIcon(R.drawable.sini);
                 }
             }
 

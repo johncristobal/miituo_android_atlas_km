@@ -34,21 +34,22 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="160dp"
+            android:scaleType="fitEnd"
+            app:srcCompat="@drawable/ciudad" />
 
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/backatlas" />
-
-        <!--androidx.viewpager.widget.ViewPager
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="160dp" /-->
-        <!--TextView
+            android:layout_height="160dp" />
+
+        <TextView
             android:id="@+id/terms"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:gravity="center"
+            android:theme="@style/textThemePrimary"
             android:textSize="8dp"
             android:layout_alignBottom="@+id/view_pager"
             android:layout_marginBottom="3dp"
@@ -60,23 +61,20 @@
             android:gravity="bottom|center_horizontal"
             android:layout_marginBottom="-2dp"
             android:layout_above="@+id/terms"
-            android:orientation="horizontal"/-->
+            android:orientation="horizontal"/>
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipeContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@+id/textView25">
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/divider">
 
             <ListView
                 android:id="@+id/listviewinfoclient"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:divider="@android:color/white"
-                android:dividerHeight="15dp"/>
+                android:alpha="0.8" />
 
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
         <TextView
@@ -91,14 +89,12 @@
             android:paddingTop="5dp"
             android:paddingRight="35dp"
             android:paddingLeft="35dp"
-            android:fontFamily="@font/lato"
             android:textColor="#FFFFFF"
             android:background="@drawable/button"
-            android:layout_below="@id/textView25"
+            android:layout_below="@id/divider"
             android:layout_centerHorizontal="true"
             android:visibility="gone"
             />
-
         <ImageView
             android:id="@+id/imgSinPolizas"
             android:visibility="gone"
@@ -134,16 +130,17 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/textView4"
             android:layout_below="@+id/textView4"
-            android:layout_marginTop="2dp"
-            android:text="Estas son sus pólizas contratadas"
-            android:theme="@style/textThemePrimary" />
-        <!--<View-->
-        <!--android:id="@+id/divider"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="1dp"-->
-        <!--android:layout_marginTop="5dp"-->
-        <!--android:layout_below="@id/textView25"-->
-        <!--android:background="#CDCDCD"/>-->
+            android:layout_marginTop="8dp"
+            android:text="Estas son tus pólizas contratadas"
+            android:theme="@style/textThemeSecondary" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/textView25"
+            android:background="#CDCDCD"/>
+
 
 
 

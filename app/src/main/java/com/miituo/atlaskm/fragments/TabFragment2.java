@@ -30,6 +30,7 @@ public class TabFragment2 extends Fragment {
         View v = inflater.inflate(R.layout.fragment_tab2, container, false);
 
         TextView fecha = (TextView)v.findViewById(R.id.texdate);
+        TextView fechaabajo = (TextView)v.findViewById(R.id.textView80);
 
         Button b1 = v.findViewById(R.id.button13);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +65,7 @@ public class TabFragment2 extends Fragment {
         String year_bef = year_data_bef.format(c.getTime());
 
         fecha.setText("del "+new SimpleDateFormat("dd").format(fechalimite)+" de "+real_before);
-        //fechaabajo.setText("al "+new SimpleDateFormat("dd").format(fechacadena)+" de "+real);
+        fechaabajo.setText("al "+new SimpleDateFormat("dd").format(fechacadena)+" de "+real);
 
         return v;
     }

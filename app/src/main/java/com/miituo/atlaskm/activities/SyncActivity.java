@@ -104,12 +104,17 @@ public class SyncActivity extends AppCompatActivity {
     SharedPreferences app_preferences;
     EditText telefono;
 
+    //public static String token;
+
+    //public threadtosync hilos;
+
     public AlertDialog alerta;
 
     public ClientMovil cli;
     public String tokencliente;
-    TextView b4,hola3,hola4,hola5,hola6,hola17,lbVigencia;
+    TextView b4,hola,hola1,hola2,hola3,hola4,hola5,hola6,hola17,lbVigencia;
     public ProgressDialog progress;
+    private LinearLayout cntHola,cntPromo;
     private ImageView imgPromo;
     public static int kms=0;
     public static String codigoCupon="";
@@ -132,13 +137,24 @@ public class SyncActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sync);
         installTls12();
 
+        hola = (TextView) findViewById(R.id.textView3);
+        hola1 = (TextView) findViewById(R.id.textView2);
+        hola2 = (TextView) findViewById(R.id.textView7);
+        hola3 = (TextView) findViewById(R.id.textView5);
         hola4 = (TextView) findViewById(R.id.textView10);
         hola5 = (TextView) findViewById(R.id.textView13);
         hola6 = (TextView) findViewById(R.id.textView16);
+        TextView hola14 = (TextView) findViewById(R.id.textView14);
         hola17 = (TextView) findViewById(R.id.textView17);
         b4 = (TextView) findViewById(R.id.button4);
+        cntHola = (LinearLayout) findViewById(R.id.cntHola);
+        cntPromo = (LinearLayout) findViewById(R.id.cntPromo);
+        lbVigencia = (TextView) findViewById(R.id.lbVigencia);
+        imgPromo = (ImageView) findViewById(R.id.imgPromo);
 
         progress = new ProgressDialog(SyncActivity.this);
+
+        //hilos = new threadtosync();
 
         app_preferences = getSharedPreferences("miituo", Context.MODE_PRIVATE);
         telefono = (EditText) findViewById(R.id.cephonetext);
@@ -238,7 +254,6 @@ public class SyncActivity extends AppCompatActivity {
             }
         }
     }
-
     private void pintaCupon(){
         kms=0;
         codigoCupon="";
@@ -259,10 +274,10 @@ public class SyncActivity extends AppCompatActivity {
                             .networkPolicy(NetworkPolicy.NO_CACHE)
                             .into(imgPromo);
 
-                    //cntHola.setVisibility(View.GONE);
+                    cntHola.setVisibility(View.GONE);
                     hola3.setText("Bienvenido a ");
                     lbVigencia.setText(txtVig);
-                    //cntPromo.setVisibility(View.VISIBLE);
+                    cntPromo.setVisibility(View.VISIBLE);
                     lbVigencia.setVisibility(View.VISIBLE);
                     hola5.setVisibility(View.GONE);
                     b4.setTextColor(Color.WHITE);
@@ -494,38 +509,41 @@ public class SyncActivity extends AppCompatActivity {
                 //hilos.Sync.execute(telefono.getText().toString());
 
                 String url = "InfoClientMobil/Celphone/"+telefono.getText().toString();
-                new GetPoliciesData(url, SyncActivity.this, (status, res) -> {
-                    if (!status){
-                        String data[] = res.split("@");
-                        launchAlert(data[1]);
-                    }else{
-                        //tenemos polizas, recuperamos list y mandamos a sms...
-                        SharedPreferences.Editor editor = app_preferences.edit();
-                        editor.putString("polizas", res);
-                        editor.putString("Celphone", telefono.getText().toString());
-                        editor.apply();
+                new GetPoliciesData(url, SyncActivity.this, new SimpleCallBack() {
+                    @Override
+                    public void run(boolean status, String res) {
+                        if (!status){
+                            String data[] = res.split("@");
+                            launchAlert(data[1]);
+                        }else{
+                            //tenemos polizas, recuperamos list y mandamos a sms...
+                            SharedPreferences.Editor editor = app_preferences.edit();
+                            editor.putString("polizas", res);
+                            editor.putString("Celphone", telefono.getText().toString());
+                            editor.apply();
 
-                        Gson parseJson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'hh:mm:ss").create();
-                        List<InfoClient> InfoList = parseJson.fromJson(res, new TypeToken<List<InfoClient>>() {
-                        }.getType());
+                            Gson parseJson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'hh:mm:ss").create();
+                            List<InfoClient> InfoList = parseJson.fromJson(res, new TypeToken<List<InfoClient>>() {
+                            }.getType());
 
-                        final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
-                        globalVariable.setPolizas(InfoList);
+                            final GlobalActivity globalVariable = (GlobalActivity) getApplicationContext();
+                            globalVariable.setPolizas(InfoList);
 
-                        String na = InfoList.get(0).getClient().getName();
-                        tokencliente = InfoList.get(0).getClient().getToken();
-                        app_preferences.edit().putString("nombre", na).apply();
+                            String na = InfoList.get(0).getClient().getName();
+                            tokencliente = InfoList.get(0).getClient().getToken();
+                            app_preferences.edit().putString("nombre", na).apply();
 
-                        //check session flag to launch main or sms
-                        String sesion = app_preferences.getString("sesion","null");
-                        if (sesion.equals("1")) {
-                            LogHelper.log(SyncActivity.this, LogHelper.backTask, "SyncActivity.sendToken", "sesion activa->home",
-                                    "", "", "", "");
-                            Intent ii = new Intent(SyncActivity.this, PrincipalActivity.class);
-                            startActivity(ii);
-                        } else {
-                            int idPolizaTemp = InfoList.get(0).getPolicies().getId();
-                            getTokenSMS(telefono.getText().toString(), idPolizaTemp);
+                            //check session flag to launch main or sms
+                            String sesion = app_preferences.getString("sesion","null");
+                            if (sesion.equals("1")) {
+                                LogHelper.log(SyncActivity.this, LogHelper.backTask, "SyncActivity.sendToken", "sesion activa->home",
+                                        "", "", "", "");
+                                Intent ii = new Intent(SyncActivity.this, PrincipalActivity.class);
+                                startActivity(ii);
+                            } else {
+                                int idPolizaTemp = InfoList.get(0).getPolicies().getId();
+                                getTokenSMS(telefono.getText().toString(), idPolizaTemp);
+                            }
                         }
                     }
                 }).execute();

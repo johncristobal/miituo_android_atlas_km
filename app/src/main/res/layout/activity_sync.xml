@@ -11,150 +11,225 @@
         android:padding="10dp"
     tools:context="com.miituo.atlaskm.activities.SyncActivity">
 
-        <ScrollView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layoutSyncPrincipal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/layoutSyncPrincipal"
+                android:id="@+id/cntHola"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="55dp"
-                    android:paddingRight="65dp"
-                    android:paddingLeft="65dp"
-                    android:paddingTop="30dp"
-                    android:paddingBottom="30dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/logo_atlas"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:paddingTop="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingLeft="10dp"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView13"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:theme="@style/textThemePrimary"
-                            android:text="¡Descubra su tarifa por kilómetro!" />
-
-                        <TextView
-                            android:id="@+id/textView16"
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="15dp"
-                            android:theme="@style/buttonThemePrimary"
-                            android:gravity="center"
-                            android:onClick="openView"
-                            android:paddingLeft="30dp"
-                            android:paddingTop="5dp"
-                            android:paddingRight="30dp"
-                            android:paddingBottom="5dp"
-                            android:text="Cotizar" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:visibility="gone"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:paddingTop="10dp"
-                        android:paddingRight="10dp"
-                        android:paddingLeft="10dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-                        <TextView
-                            android:id="@+id/textView14"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:textColor="#000000"
-                            android:text="Simula tu tarifa mensual"
-                            android:textSize="16sp" />
-                        <TextView
-                            android:id="@+id/textView17"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/greenbutton"
-                            android:onClick="openView"
-                            android:paddingBottom="5dp"
-                            android:paddingLeft="30dp"
-                            android:paddingRight="30dp"
-                            android:paddingTop="5dp"
-                            android:text="Simular"
-                            android:textColor="#000000" />
-                    </LinearLayout>
-
-                </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="match_parent"
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginRight="40dp"
-                    android:gravity="center"
-                    android:lineSpacingExtra="8sp"
-                    android:text="Si ya tiene una póliza, ingrese con su número de teléfono celular"
-                    android:theme="@style/textThemePrimary" />
+                    android:clickable="false"
+                    android:fontFamily="@font/lato"
+                    android:text="Hola, "
+                    android:textAllCaps="false"
+                    android:textColor="@color/azul_miituo"
+                    android:textSize="28sp" />
 
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:fontFamily="@font/lato"
+                    android:text="bienvenido"
+                    android:textSize="28sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:text="a "
+                    android:textColor="#000000"
+                    android:fontFamily="@font/lato"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="atlas xkm"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/lato"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cntPromo"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/imgPromo"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:scaleType="fitXY"/>
+                <TextView
+                    android:id="@+id/lbVigencia"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="0dp"
+                    android:textColor="#444444"
+                    android:minLines="2"
+                    android:maxLines="3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/cntSinPromo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:theme="@style/textThemePrimary"
+                        android:text="Descubre tu tarifa por kilómetro" />
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:onClick="openView"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="8dp"
+                        android:theme="@style/buttonThemePrimary"
+                        android:text="  Cotiza  " />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textColor="#000000"
+                        android:text="Simula tu tarifa mensual"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/greenbutton"
+                        android:onClick="openView"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="5dp"
+                        android:text="Simular"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="50dp"
+                android:theme="@style/textThemePrimary"
+                android:lineSpacingExtra="8sp"
+                android:text="Si ya tienes una póliza, ingresa con tu número de teléfono celular" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/backspinner">
                 <EditText
                     android:id="@+id/cephonetext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="50dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/border"
                     android:theme="@style/textThemeEdit"
-                    android:gravity="center"
+                    android:background="@color/transparent"
+                    android:maxEms="10"
+                    android:digits="0123456789"
                     android:hint="10 dígitos"
-                    android:inputType="number" />
+                    android:inputType="numberSigned" />
+            </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/button4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/lato"
-                    android:onClick="GetSync"
-                    android:paddingLeft="50dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="50dp"
-                    android:paddingBottom="10dp"
-                    android:text="Iniciar sesión"
-                    android:textColor="@color/azul_miituo"
-                    android:textSize="16sp" />
+            <TextView
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:onClick="GetSync"
+                android:paddingBottom="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="10dp"
+                android:text="Iniciar sesión"
+                android:theme="@style/textThemeEditSecondary"
+                />
 
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
+</LinearLayout>

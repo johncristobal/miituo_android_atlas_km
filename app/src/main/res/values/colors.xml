@@ -7,8 +7,8 @@
     <color name="colorPrimaryDark">#00C7FF</color>
     <color name="colorAccent">#000000</color>
     <color name="colorGray">#ABABAB</color>
-    <color name="azul_miituo_">#00c8ff</color>
-    <color name="azul_miituo">#FE9223</color>
+    <color name="azul_miituo">#00c8ff</color>
+    <color name="azul_miituo_">#FE9223</color>
     <color name="rojo_miituo">#CC0000</color>
     <color name="amarillo_miituo">#c8ff00</color>
     <color name="rosa_miituo">#ff4bd2</color>

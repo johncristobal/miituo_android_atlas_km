@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".activities.CancelActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,8 +29,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginStart="15dp"
             android:text="Pólizas"
-            android:textSize="15sp"
-            android:textColor="@color/azul_miituo"
+            android:theme="@style/textThemePrimary"
             app:layout_constraintStart_toEndOf="@+id/BackButton"
             app:layout_constraintTop_toTopOf="parent" />
 
