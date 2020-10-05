@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -25,8 +26,8 @@ public class AvisoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);*/
 
         //get back arrow
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +37,15 @@ public class AvisoActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
+
+        ImageButton back = (ImageButton)findViewById(R.id.BackButton);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         vista = (WebView)findViewById(R.id.webdata);
 

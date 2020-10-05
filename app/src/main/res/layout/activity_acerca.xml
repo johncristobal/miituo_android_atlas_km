@@ -1,25 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.miituo.atlaskm.activities.AcercaActivity">
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/white"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.miituo.atlas.activities.AcercaActivity"
-        tools:showIn="@layout/activity_acerca">
+        android:id="@+id/headAviso"
+        android:background="#fff"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_height="50dp">
+
+        <ImageButton
+            android:id="@+id/BackButton"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/closeimage" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text=""
+            android:theme="@style/textThemePrimary"
+            android:textColor="@color/naranjaatlas"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/BackButton"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
         <RelativeLayout
             android:id="@+id/relativeLayout3"
             android:layout_width="match_parent"
+            android:layout_below="@+id/headAviso"
             android:layout_height="70dp">
 
             <ImageView
@@ -69,6 +95,3 @@
 
 
     </RelativeLayout>
-
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>

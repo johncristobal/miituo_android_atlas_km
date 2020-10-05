@@ -21,7 +21,6 @@ import com.miituo.atlaskm.utils.SimpleCallBack;
 
 public class TerminosActivity extends BaseActivity implements SimpleCallBack {
 
-    private Typeface typeface;
     private ListView listaTerminos;
     private TerminosAdapter vadapter;
     public static AlertDialog alertaPago;
@@ -44,11 +43,10 @@ public class TerminosActivity extends BaseActivity implements SimpleCallBack {
         setSupportActionBar(toolbar);
 
          */
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
         listaTerminos=(ListView)findViewById(R.id.listaTerminos);
-        vadapter = new TerminosAdapter(getApplicationContext(),typeface,this);
+        vadapter = new TerminosAdapter(getApplicationContext(),this);
         listaTerminos.setAdapter(vadapter);
     }
 

@@ -26,7 +26,6 @@ import androidx.core.app.ActivityCompat;
 
 public class CancelActivity extends AppCompatActivity {
 
-    private Typeface typeface;
     private TextView lb1, lbAceptar;
 
     @Override
@@ -51,12 +50,9 @@ public class CancelActivity extends AppCompatActivity {
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
 
         lb1=(TextView) findViewById(R.id.lb1);
-        lb1.setTypeface(typeface);
         lbAceptar=(TextView) findViewById(R.id.lbAceptar);
-        lbAceptar.setTypeface(typeface);
         String vacacionesHelp="Sí deseas cancelar tu póliza por favor ponte en contacto con nosotros al (55) 84.21.05.00";
         SpannableStringBuilder str = new SpannableStringBuilder(vacacionesHelp);
         str.setSpan(new android.text.style.StyleSpan(android.graphics.Typeface.BOLD),

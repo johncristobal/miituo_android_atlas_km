@@ -214,9 +214,12 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".activities.BaseActivity" />
-        <activity android:name=".activities.AvisoActivity" />
+        <activity android:name=".activities.AvisoActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activities.AseguradorasActivity" />
-        <activity android:name=".activities.AcercaActivity" />
+        <activity android:name=".activities.AcercaActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
 
 
 

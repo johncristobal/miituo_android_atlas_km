@@ -14,16 +14,14 @@ import com.miituo.atlaskm.utils.SimpleCallBack;
 public class TerminosAdapter extends BaseAdapter {
 
     private Context mContext;
-    public Typeface tipo;
     public SimpleCallBack cb;
     public String[] values = new String[] { "Aviso de Privacidad","Términos y condiciones miituo",
             "Condiciones Generales del Seguro",
             "Folleto de Derechos del Asegurado"};
 
 
-    public TerminosAdapter(Context c, Typeface t, SimpleCallBack cb){
+    public TerminosAdapter(Context c, SimpleCallBack cb){
         mContext = c;
-        tipo = t;
         this.cb=cb;
     }
 
@@ -50,7 +48,6 @@ public class TerminosAdapter extends BaseAdapter {
         ImageView down = (ImageView)v.findViewById(R.id.imgDown);
         ImageView view = (ImageView)v.findViewById(R.id.imgView);
 
-        opcion.setTypeface(tipo);
         opcion.setText(values[position]);
 
         view.setOnClickListener(new View.OnClickListener() {

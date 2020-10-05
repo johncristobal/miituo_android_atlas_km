@@ -10,6 +10,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -19,8 +20,6 @@ import androidx.appcompat.widget.Toolbar;
 import com.miituo.atlaskm.R;
 
 public class AcercaActivity extends AppCompatActivity {
-
-    private Typeface typeface;
 
     public ListView lista;
     public String [] opts;
@@ -38,14 +37,10 @@ public class AcercaActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);*/
 
         //get back arrow
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/herne1.ttf");
-        Typeface typefacebold = Typeface.createFromAsset(getAssets(), "fonts/herne.ttf");
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         TextView hola = (TextView)findViewById(R.id.textView57);
-        hola.setTypeface(typefacebold);
         try {
             PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
             float version = Float.parseFloat(pInfo.versionName);
@@ -53,6 +48,15 @@ public class AcercaActivity extends AppCompatActivity {
         }catch (Exception e){
             e.printStackTrace();
         }
+
+        ImageButton back = (ImageButton)findViewById(R.id.BackButton);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         lista = (ListView)findViewById(R.id.listaopciones);
 
@@ -149,8 +153,8 @@ public class AcercaActivity extends AppCompatActivity {
         super.onOptionsItemSelected(item);
         if (item.getItemId() == android.R.id.home) {
             finish(); // close this activity and return to preview activity (if there is any)
-            Intent i=new Intent(this,PrincipalActivity.class);
-            startActivity(i);
+            //Intent i=new Intent(this,PrincipalActivity.class);
+            //startActivity(i);
         }
         return true;
     }
